@@ -1,0 +1,89 @@
+# dependencies
+/client/node_modules
+/client/.pnp
+/client/.pnp.js
+
+# testing
+/client/coverage
+
+# next.js
+/client/.next/
+/client/out/
+
+# production
+/client/build
+
+# Django
+/server/*.log
+/server/*.pot
+/server/*.pyc
+/server/__pycache__/
+/server/local_settings.py
+/server/db.sqlite3
+/server/media
+
+# Django specific
+/server/*.py[cod]
+/server/*.sqlite3
+/server/*.pyo
+/server/*.pyd
+/server/*.pdb
+/server/*.egg
+/server/*.egg-info
+/server/*.eggs
+/server/*.cover
+/server/*.coverage
+/server/.coverage.*
+/server/.cache
+/server/.tox
+/server/nosetests.xml
+/server/coverage.xml
+/server/*.cover
+/server/*.log
+/server/*.pot
+/server/*.mo
+/server/*.swp
+/server/*.swo
+/server/*.swn
+/server/*.bak
+/server/*.orig
+/server/*.rej
+/server/*.sublime-project
+/server/*.sublime-workspace
+/server/.idea/
+/server/.vscode/
+/server/*.env
+/server/.env
+/server/*.env.*
+
+
+# dependencies
+/client/node_modules
+/client/.pnp
+/client/.pnp.js
+
+# testing
+/client/coverage
+
+# next.js
+/client/.next/
+/client/out/
+
+# production
+/client/build
+
+# misc
+/client/.DS_Store
+/client/*.pem
+
+# debug
+/client/npm-debug.log*
+/client/yarn-debug.log*
+/client/yarn-error.log*
+/client/.pnpm-debug.log*
+
+# local env files
+/client/.env*.local
+
+# vercel
+/client/.vercel
