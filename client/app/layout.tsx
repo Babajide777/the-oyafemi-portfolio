@@ -1,4 +1,14 @@
 'use client';
+import { Cormorant_SC, Outfit } from 'next/font/google';
+
+const cormorantSC = Cormorant_SC({
+  subsets: ['latin'],
+  weight: ['400', '600', '700']
+});
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['400', '500', '700', '900']
+});
 
 export default function RootLayout({
   children
@@ -7,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${cormorantSC.className} ${outfit.className}`}>
+        {children}
+      </body>
     </html>
   );
 }
