@@ -1,5 +1,6 @@
 'use client';
 import { Cormorant_SC, Outfit } from 'next/font/google';
+import { productSans, switzer } from '@/utils/fonts';
 
 const cormorantSC = Cormorant_SC({
   subsets: ['latin'],
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cormorantSC.className} ${outfit.className}`}>
+      <body
+        className={`${cormorantSC.className} ${outfit.className} ${productSans.variable} ${switzer.variable}`}
+      >
         {children}
       </body>
     </html>
