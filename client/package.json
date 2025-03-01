@@ -1,5 +1,6 @@
 {
   "name": "client",
+<<<<<<< HEAD
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,4 +25,16 @@
     "@types/react-dom": "^18",
     "typescript": "^5"
   }
+=======
+  "version": "1.0.0",
+  "description": "NextJs app",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+>>>>>>> 1356931 (.)
 }
