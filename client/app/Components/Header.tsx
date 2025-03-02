@@ -26,7 +26,7 @@ export default function Header() {
         {pages.map(page => (
           <Link
             key={page}
-            href={`/${page.toLowerCase()}`}
+            href={`#${page.toLowerCase()}`}
             style={{ textDecoration: 'none', color: 'inherit' }}
           >
             <Typography
