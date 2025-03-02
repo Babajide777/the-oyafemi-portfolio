@@ -8,6 +8,7 @@ const pages = ['About', 'Work', 'Technologies', 'Blog'];
 
 export default function Header() {
   return (
+<<<<<<< HEAD
     <AppBar
       position="static"
       sx={{
@@ -47,6 +48,17 @@ export default function Header() {
               }}
               variant="body1"
             >
+=======
+    <AppBar position="static" sx={{ display: 'flex', background: 'red' }}>
+      <Toolbar>
+        {pages.map(page => (
+          <Link
+            key={page}
+            href={`/${page.toLowerCase()}`}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <Typography sx={{ textAlign: 'center', cursor: 'pointer', mx: 2 }}>
+>>>>>>> effb97f (The navbar is showing now but has not been styled yet)
               {page}
             </Typography>
           </Link>
