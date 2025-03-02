@@ -1,9 +1,18 @@
 'use client';
 
+import { Box, Container, Typography } from '@mui/material';
+import About from './Components/About';
+import Homescreen from './Components/Homescreen';
+import Technologies from './Components/technologies';
+import Work from './Components/work';
+
 export default function Home() {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <Box>
+      <Homescreen />
+      <About />
+      <Technologies />
+      <Work />
+    </Box>
   );
 }
