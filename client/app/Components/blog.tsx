@@ -3,7 +3,7 @@ import React from 'react';
 
 const Blog = () => {
   return (
-    <Box>
+    <Box id="blog">
       <Typography>TECHNOLOGIES</Typography>
     </Box>
   );
