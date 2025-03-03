@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <Box>
       <Homescreen />
-      <About />
+      {/* <About />
       <Technologies />
-      <Work />
+      <Work /> */}
     </Box>
   );
 }
