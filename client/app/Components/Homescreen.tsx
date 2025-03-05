@@ -1,23 +1,23 @@
 import { Box, Button, Typography } from '@mui/material';
-import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import pages from '@/utils/data';
 import React, { useEffect, useState } from 'react';
 
 const Homescreen = () => {
-  const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
+  const [showContent, setShowContent] = useState(true); // State to control visibility
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
+    setIsMobile(window.innerWidth < 900);
   }, []);
 
-  const pageToSection = () => {
-    const section = document.getElementById(pages[0].toLowerCase());
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+  const navigateToNextPage = () => {
+    setShowContent(false); // Hide current content
+    setTimeout(() => {
+      window.location.href = `#${pages[0].toLowerCase()}`; // Navigate to next page
+    }, 500); // Delay for smooth transition
   };
+
   return (
     <Box
       component="section"
@@ -26,75 +26,83 @@ const Homescreen = () => {
         flexDirection: 'column',
         alignItems: 'center',
         height: '100vh',
-        mt: { xs: '80px', md: '20px' }
+        mt: { xs: '80px', md: '20px' },
+        transition: 'opacity 0.5s ease-in-out',
+        opacity: showContent ? 1 : 0 // Fade out effect
       }}
     >
-      <Typography
-        variant="h2"
-        sx={{
-          textAlign: 'center',
-          width: { xs: '90%', md: '50%' },
-          mb: '20px'
-        }}
-      >
-        <Typography component="span" variant="h1">
-          {' '}
-          My Name is
-        </Typography>{' '}
-        Babajide Oyafemi
-      </Typography>
-      <Typography variant="body2" sx={{ color: '#6B6B6B', mb: '60px' }}>
-        And This is my portfolio showcase
-      </Typography>
-      <Box
-        sx={{
-          borderColor: '#CECECE',
-          borderWidth: '1px',
-          borderStyle: 'solid',
-          borderRadius: '150px',
-          padding: '20px',
-          mb: { xs: '80px', md: '40px' }
-        }}
-      >
-        <Box
-          sx={{
-            background: '#E6AF2E',
-            borderRadius: '150px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          <img
-            src="../../Images/User-Image.png"
-            alt=""
-            style={{ borderRadius: '150px' }}
-          />
-        </Box>
-      </Box>
-      <Box display="flex" justifyContent="center" mt={4}>
-        {isMobile ? (
-          // Drag button for mobile
-          <motion.div
-            drag="x" // Drag only in the horizontal direction
-            dragConstraints={{ left: 0, right: 100 }} // Set movement limits
-            onDragEnd={pageToSection} // Scroll on drag end
+      {showContent && (
+        <>
+          <Typography
+            variant="h2"
+            sx={{
+              textAlign: 'center',
+              width: { xs: '90%', md: '50%' },
+              mb: '20px'
+            }}
           >
-            <Button variant="contained" sx={{ px: 4, py: 2 }}>
-              Drag up to continue
-            </Button>
-          </motion.div>
-        ) : (
-          // Click button for desktop
-          <Button
-            variant="contained"
-            onClick={pageToSection}
-            sx={{ px: 4, py: 2 }}
+            <Typography component="span" variant="h1">
+              My Name is
+            </Typography>{' '}
+            Babajide Oyafemi
+          </Typography>
+          <Typography variant="body2" sx={{ color: '#6B6B6B', mb: '60px' }}>
+            And This is my portfolio showcase
+          </Typography>
+          <Box
+            sx={{
+              borderColor: '#CECECE',
+              borderWidth: '1px',
+              borderStyle: 'solid',
+              borderRadius: '150px',
+              padding: '20px',
+              mb: { xs: '80px', md: '40px' }
+            }}
           >
-            Click here to continue
-          </Button>
-        )}
-      </Box>
+            <Box
+              sx={{
+                background: '#E6AF2E',
+                borderRadius: '150px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}
+            >
+              <img
+                src="../../Images/User-Image.png"
+                alt=""
+                style={{ borderRadius: '150px' }}
+              />
+            </Box>
+          </Box>
+          <Box display="flex" justifyContent="center" mt={4}>
+            {isMobile ? (
+              <motion.div
+                drag="y"
+                dragConstraints={{ top: -100, bottom: 0 }}
+                onDragEnd={(event, info) => {
+                  if (info.offset.y < -50) {
+                    navigateToNextPage();
+                  }
+                }}
+                style={{ cursor: 'grab' }}
+              >
+                <Button variant="contained" sx={{ px: 4, py: 2 }}>
+                  Drag up to continue
+                </Button>
+              </motion.div>
+            ) : (
+              <Button
+                variant="contained"
+                onClick={navigateToNextPage}
+                sx={{ px: 4, py: 2 }}
+              >
+                Click here to continue
+              </Button>
+            )}
+          </Box>
+        </>
+      )}
     </Box>
   );
 };
