@@ -1,7 +1,23 @@
 import { Box, Button, Typography } from '@mui/material';
-import React from 'react';
+import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
+import pages from '@/utils/data';
+import React, { useEffect, useState } from 'react';
 
 const Homescreen = () => {
+  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
+  const pageToSection = () => {
+    const section = document.getElementById(pages[0].toLowerCase());
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <Box
       component="section"
@@ -56,18 +72,29 @@ const Homescreen = () => {
           />
         </Box>
       </Box>
-      <Button
-        variant="contained"
-        sx={{
-          typography: 'body1',
-          background: '#E6AF2E',
-          color: '#000000',
-          width: { xs: '90%', md: '70%' },
-          height: '500px'
-        }}
-      >
-        Click here to continue
-      </Button>
+      <Box display="flex" justifyContent="center" mt={4}>
+        {isMobile ? (
+          // Drag button for mobile
+          <motion.div
+            drag="x" // Drag only in the horizontal direction
+            dragConstraints={{ left: 0, right: 100 }} // Set movement limits
+            onDragEnd={pageToSection} // Scroll on drag end
+          >
+            <Button variant="contained" sx={{ px: 4, py: 2 }}>
+              Drag up to continue
+            </Button>
+          </motion.div>
+        ) : (
+          // Click button for desktop
+          <Button
+            variant="contained"
+            onClick={pageToSection}
+            sx={{ px: 4, py: 2 }}
+          >
+            Click here to continue
+          </Button>
+        )}
+      </Box>
     </Box>
   );
 };

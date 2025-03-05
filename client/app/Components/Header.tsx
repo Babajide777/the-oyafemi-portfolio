@@ -3,8 +3,7 @@
 import { AppBar, Container, Menu, Toolbar, Typography } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
-
-const pages = ['About', 'Work', 'Technologies', 'Blog'];
+import pages from '@/utils/data';
 
 export default function Header() {
   return (
