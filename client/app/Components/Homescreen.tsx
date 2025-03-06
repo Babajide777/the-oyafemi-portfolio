@@ -28,7 +28,8 @@ const Homescreen = () => {
         height: '100vh',
         mt: { xs: '80px', md: '20px' },
         transition: 'opacity 0.5s ease-in-out',
-        opacity: showContent ? 1 : 0 // Fade out effect
+        opacity: showContent ? 1 : 0, // Fade out effect
+        position: 'relative'
       }}
     >
       {showContent && (
@@ -87,7 +88,17 @@ const Homescreen = () => {
                 }}
                 style={{ cursor: 'grab' }}
               >
-                <Button variant="contained" sx={{ px: 4, py: 2 }}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    typography: 'body1',
+                    background: '#E6AF2E',
+                    color: '#000000',
+                    height: { xs: '100px', md: '70px' },
+                    width: { xs: '350px', md: '600px' },
+                    borderRadius: '150px 150px 0 0'
+                  }}
+                >
                   Drag up to continue
                 </Button>
               </motion.div>
@@ -95,7 +106,14 @@ const Homescreen = () => {
               <Button
                 variant="contained"
                 onClick={navigateToNextPage}
-                sx={{ px: 4, py: 2 }}
+                sx={{
+                  typography: 'body1',
+                  background: '#E6AF2E',
+                  color: '#000000',
+                  height: { xs: '100px', md: '70px' },
+                  width: { xs: '100px', md: '700px' },
+                  borderRadius: '150px 150px 0 0'
+                }}
               >
                 Click here to continue
               </Button>
