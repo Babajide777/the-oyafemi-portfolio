@@ -12,10 +12,10 @@ const Homescreen = () => {
     setIsMobile(window.innerWidth < 900);
 
     const handleScroll = (event: WheelEvent) => {
-      if (event.deltaY > 50) {
-        navigateToPage(currentIndex + 1); // Scroll Down
-      } else if (event.deltaY < -50) {
-        navigateToPage(currentIndex - 1); // Scroll Up
+      if (event.deltaY > 50 && currentIndex < pages.length - 1) {
+        navigateToPage(currentIndex + 1); // Scroll Down (only if not on last page)
+      } else if (event.deltaY < -50 && currentIndex > 0) {
+        navigateToPage(currentIndex - 1); // Scroll Up (only if not on first page)
       }
     };
 
@@ -26,9 +26,9 @@ const Homescreen = () => {
 
     const handleTouchMove = (event: TouchEvent) => {
       const touchEndY = event.touches[0].clientY;
-      if (touchStartY - touchEndY > 50) {
+      if (touchStartY - touchEndY > 50 && currentIndex < pages.length - 1) {
         navigateToPage(currentIndex + 1); // Swipe Up (Scroll Down)
-      } else if (touchEndY - touchStartY > 50) {
+      } else if (touchEndY - touchStartY > 50 && currentIndex > 0) {
         navigateToPage(currentIndex - 1); // Swipe Down (Scroll Up)
       }
     };
