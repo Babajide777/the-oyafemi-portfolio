@@ -17,9 +17,7 @@ export default function Layout({ title, children, darkMode }: LayoutProps) {
           {title ? `${title} - Oyafemi Portfolio` : 'Oyafemi Portfolio'}
         </title>
       </Head>
-      <Header />
       <Container>{children}</Container>
-      <Footer />
     </ThemeProvider>
   );
 }
