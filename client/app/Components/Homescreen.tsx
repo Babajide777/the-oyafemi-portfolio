@@ -5,53 +5,17 @@ import React, { useEffect, useState } from 'react';
 
 const Homescreen = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [showContent, setShowContent] = useState(true);
-  const [currentIndex, setCurrentIndex] = useState(0); // Track current page index
+  const [showContent, setShowContent] = useState(true); // State to control visibility
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 900);
+  }, []);
 
-    const handleScroll = (event: WheelEvent) => {
-      if (event.deltaY > 50 && currentIndex < pages.length - 1) {
-        navigateToPage(currentIndex + 1); // Scroll Down (only if not on last page)
-      } else if (event.deltaY < -50 && currentIndex > 0) {
-        navigateToPage(currentIndex - 1); // Scroll Up (only if not on first page)
-      }
-    };
-
-    let touchStartY = 0;
-    const handleTouchStart = (event: TouchEvent) => {
-      touchStartY = event.touches[0].clientY;
-    };
-
-    const handleTouchMove = (event: TouchEvent) => {
-      const touchEndY = event.touches[0].clientY;
-      if (touchStartY - touchEndY > 50 && currentIndex < pages.length - 1) {
-        navigateToPage(currentIndex + 1); // Swipe Up (Scroll Down)
-      } else if (touchEndY - touchStartY > 50 && currentIndex > 0) {
-        navigateToPage(currentIndex - 1); // Swipe Down (Scroll Up)
-      }
-    };
-
-    window.addEventListener('wheel', handleScroll);
-    window.addEventListener('touchstart', handleTouchStart);
-    window.addEventListener('touchmove', handleTouchMove);
-
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-      window.removeEventListener('touchstart', handleTouchStart);
-      window.removeEventListener('touchmove', handleTouchMove);
-    };
-  }, [currentIndex]); // Update when index changes
-
-  const navigateToPage = (index: number) => {
-    if (index < 0 || index >= pages.length) return; // Prevent out-of-bounds
-    setShowContent(false);
+  const navigateToNextPage = () => {
+    setShowContent(false); // Hide current content
     setTimeout(() => {
-      window.location.href = `#${pages[index].toLowerCase()}`;
-      setCurrentIndex(index);
-      setShowContent(true); // Restore visibility after navigation
-    }, 500);
+      window.location.href = `#${pages[0].toLowerCase()}`; // Navigate to next page
+    }, 500); // Delay for smooth transition
   };
 
   return (
@@ -64,7 +28,7 @@ const Homescreen = () => {
         height: '100vh',
         mt: { xs: '80px', md: '20px' },
         transition: 'opacity 0.5s ease-in-out',
-        opacity: showContent ? 1 : 0,
+        opacity: showContent ? 1 : 0, // Fade out effect
         position: 'relative'
       }}
     >
@@ -116,12 +80,10 @@ const Homescreen = () => {
             {isMobile ? (
               <motion.div
                 drag="y"
-                dragConstraints={{ top: -100, bottom: 100 }}
+                dragConstraints={{ top: -100, bottom: 0 }}
                 onDragEnd={(event, info) => {
                   if (info.offset.y < -50) {
-                    navigateToPage(currentIndex + 1);
-                  } else if (info.offset.y > 50) {
-                    navigateToPage(currentIndex - 1);
+                    navigateToNextPage();
                   }
                 }}
                 style={{ cursor: 'grab' }}
@@ -134,26 +96,26 @@ const Homescreen = () => {
                     color: '#000000',
                     height: { xs: '100px', md: '70px' },
                     width: { xs: '350px', md: '600px' },
-                    borderRadius: '200px 200px 0 0'
+                    borderRadius: '150px 150px 0 0'
                   }}
                 >
-                  Drag to navigate
+                  Drag up to continue
                 </Button>
               </motion.div>
             ) : (
               <Button
                 variant="contained"
-                onClick={() => navigateToPage(currentIndex + 1)}
+                onClick={navigateToNextPage}
                 sx={{
                   typography: 'body1',
                   background: '#E6AF2E',
                   color: '#000000',
                   height: { xs: '100px', md: '70px' },
-                  width: { xs: '100px', md: '700px' },
-                  borderRadius: '200px 200px 0 0'
+                  width: { xs: '100px', md: '600px' },
+                  borderRadius: '150px 150px 0 0'
                 }}
               >
-                Click or Scroll to Continue
+                Click here to continue
               </Button>
             )}
           </Box>
