@@ -38,7 +38,7 @@ const Homescreen = () => {
           variant="h2"
           sx={{
             textAlign: 'center',
-            width: { xs: '90%', md: '50%' },
+            width: { xs: '50%', md: '30%' },
             mb: '20px'
           }}
         >
@@ -47,7 +47,15 @@ const Homescreen = () => {
           </Typography>{' '}
           Babajide Oyafemi
         </Typography>
-        <Typography variant="body2" sx={{ color: '#6B6B6B', mb: '60px' }}>
+        <Typography
+          variant="body2"
+          sx={{
+            textAlign: 'center',
+            color: '#6B6B6B',
+            mb: '60px',
+            width: { xs: '40%' }
+          }}
+        >
           And This is my portfolio showcase
         </Typography>
         <Box

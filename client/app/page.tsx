@@ -11,8 +11,19 @@ import Header from './Components/Header';
 export default function Home() {
   return (
     <Box sx={{ width: '100%' }}>
-      <Header />
-      <Homescreen />
+      <Box
+        sx={{
+          height: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          overflow: 'hidden'
+        }}
+      >
+        <Header />
+        <Box sx={{ flex: 1 }}>
+          <Homescreen />
+        </Box>
+      </Box>
       <About />
       <Technologies />
       <Work />

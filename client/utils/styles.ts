@@ -25,8 +25,8 @@ const getTheme = ({ darkMode }: GetThemeOptions): Theme =>
   createTheme({
     typography: {
       fontFamily: 'Cormorant SC, serif',
-      h1: { fontSize: '72px', fontWeight: 400 },
-      h2: { fontSize: '72px', fontWeight: 600 },
+      h1: { fontSize: '40px', fontWeight: 400 },
+      h2: { fontSize: '40px', fontWeight: 600 },
       h3: { fontSize: '56px', fontWeight: 700 },
       h4: {
         fontFamily: 'Outfit, sans-serif',
@@ -45,7 +45,7 @@ const getTheme = ({ darkMode }: GetThemeOptions): Theme =>
       },
       body2: {
         fontFamily: 'Outfit, sans-serif',
-        fontSize: '24px',
+        fontSize: '16px',
         fontWeight: 400
       },
       body3: {
