@@ -17,7 +17,7 @@ export default function Header() {
         margin: '0 auto',
         width: '90%',
         height: '30px',
-        marginTop: '15px',
+        marginTop: '10px',
         borderRadius: '40px',
         boxShadow: '0px 4px 30px 0px #B333E914',
         background: '#FFFFFF'
