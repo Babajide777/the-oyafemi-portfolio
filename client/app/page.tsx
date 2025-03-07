@@ -10,7 +10,7 @@ import Header from './Components/Header';
 
 export default function Home() {
   return (
-    <Box>
+    <Box sx={{ width: '100%' }}>
       <Header />
       <Homescreen />
       <About />

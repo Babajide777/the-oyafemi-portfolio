@@ -11,12 +11,12 @@ const Homescreen = () => {
     setIsMobile(window.innerWidth < 900);
   }, []);
 
-  const navigateToNextPage = () => {
-    setShowContent(false); // Hide current content
-    setTimeout(() => {
-      window.location.href = `#${pages[0].toLowerCase()}`; // Navigate to next page
-    }, 500); // Delay for smooth transition
-  };
+  // const navigateToNextPage = () => {
+  //   setShowContent(false); // Hide current content
+  //   setTimeout(() => {
+  //     window.location.href = `#${pages[0].toLowerCase()}`; // Navigate to next page
+  //   }, 500); // Delay for smooth transition
+  // };
 
   return (
     <Box
@@ -28,99 +28,99 @@ const Homescreen = () => {
         height: '100vh',
         mt: { xs: '80px', md: '20px' },
         transition: 'opacity 0.5s ease-in-out',
-        opacity: showContent ? 1 : 0, // Fade out effect
+        // opacity: showContent ? 1 : 0, // Fade out effect
         position: 'relative'
       }}
     >
-      {showContent && (
-        <>
-          <Typography
-            variant="h2"
-            sx={{
-              textAlign: 'center',
-              width: { xs: '90%', md: '50%' },
-              mb: '20px'
-            }}
-          >
-            <Typography component="span" variant="h1">
-              My Name is
-            </Typography>{' '}
-            Babajide Oyafemi
-          </Typography>
-          <Typography variant="body2" sx={{ color: '#6B6B6B', mb: '60px' }}>
-            And This is my portfolio showcase
-          </Typography>
+      {/* {showContent && ( */}
+      <>
+        <Typography
+          variant="h2"
+          sx={{
+            textAlign: 'center',
+            width: { xs: '90%', md: '50%' },
+            mb: '20px'
+          }}
+        >
+          <Typography component="span" variant="h1">
+            My Name is
+          </Typography>{' '}
+          Babajide Oyafemi
+        </Typography>
+        <Typography variant="body2" sx={{ color: '#6B6B6B', mb: '60px' }}>
+          And This is my portfolio showcase
+        </Typography>
+        <Box
+          sx={{
+            borderColor: '#CECECE',
+            borderWidth: '1px',
+            borderStyle: 'solid',
+            borderRadius: '150px',
+            padding: '20px',
+            mb: { xs: '80px', md: '40px' }
+          }}
+        >
           <Box
             sx={{
-              borderColor: '#CECECE',
-              borderWidth: '1px',
-              borderStyle: 'solid',
+              background: '#E6AF2E',
               borderRadius: '150px',
-              padding: '20px',
-              mb: { xs: '80px', md: '40px' }
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
             }}
           >
-            <Box
-              sx={{
-                background: '#E6AF2E',
-                borderRadius: '150px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-            >
-              <img
-                src="../../Images/User-Image.png"
-                alt=""
-                style={{ borderRadius: '150px' }}
-              />
-            </Box>
+            <img
+              src="../../Images/User-Image.png"
+              alt=""
+              style={{ borderRadius: '150px' }}
+            />
           </Box>
-          <Box display="flex" justifyContent="center" mt={4}>
-            {isMobile ? (
-              <motion.div
-                drag="y"
-                dragConstraints={{ top: -100, bottom: 0 }}
-                onDragEnd={(event, info) => {
-                  if (info.offset.y < -50) {
-                    navigateToNextPage();
-                  }
-                }}
-                style={{ cursor: 'grab' }}
-              >
-                <Button
-                  variant="contained"
-                  sx={{
-                    typography: 'body1',
-                    background: '#E6AF2E',
-                    color: '#000000',
-                    height: { xs: '100px', md: '70px' },
-                    width: { xs: '350px', md: '600px' },
-                    borderRadius: '150px 150px 0 0'
-                  }}
-                >
-                  Drag up to continue
-                </Button>
-              </motion.div>
-            ) : (
+        </Box>
+        <Box display="flex" justifyContent="center" mt={4}>
+          {isMobile ? (
+            <motion.div
+              drag="y"
+              dragConstraints={{ top: -100, bottom: 0 }}
+              onDragEnd={(event, info) => {
+                if (info.offset.y < -50) {
+                  // navigateToNextPage();
+                }
+              }}
+              style={{ cursor: 'grab' }}
+            >
               <Button
                 variant="contained"
-                onClick={navigateToNextPage}
                 sx={{
                   typography: 'body1',
                   background: '#E6AF2E',
                   color: '#000000',
                   height: { xs: '100px', md: '70px' },
-                  width: { xs: '100px', md: '600px' },
+                  width: { xs: '350px', md: '600px' },
                   borderRadius: '150px 150px 0 0'
                 }}
               >
-                Click here to continue
+                Drag up to continue
               </Button>
-            )}
-          </Box>
-        </>
-      )}
+            </motion.div>
+          ) : (
+            <Button
+              variant="contained"
+              // onClick={navigateToNextPage}
+              sx={{
+                typography: 'body1',
+                background: '#E6AF2E',
+                color: '#000000',
+                height: { xs: '100px', md: '70px' },
+                width: { xs: '100px', md: '600px' },
+                borderRadius: '150px 150px 0 0'
+              }}
+            >
+              Click here to continue
+            </Button>
+          )}
+        </Box>
+      </>
+      {/* )} */}
     </Box>
   );
 };
