@@ -11,16 +11,25 @@ export default function Header() {
       position="static"
       sx={{
         display: { xs: 'none', md: 'flex' },
+        alignItems: 'center',
+        justifyContent: 'center',
         margin: '0 auto',
         width: '90%',
-        marginTop: '20px',
+        height: '30px',
+        marginTop: '10px',
         borderRadius: '40px',
         boxShadow: '0px 4px 30px 0px #B333E914',
         background: '#FFFFFF'
       }}
     >
       <Toolbar
-        sx={{ width: '100', display: 'flex', justifyContent: 'space-around' }}
+        sx={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-around'
+        }}
       >
         {pages.map(page => (
           <Link
