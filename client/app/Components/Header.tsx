@@ -12,6 +12,8 @@ export default function Header() {
       position="static"
       sx={{
         display: { xs: 'none', md: 'flex' },
+        alignItems: 'center',
+        justifyContent: 'center',
         margin: '0 auto',
         width: '90%',
         height: '30px',
@@ -22,7 +24,13 @@ export default function Header() {
       }}
     >
       <Toolbar
-        sx={{ width: '100', display: 'flex', justifyContent: 'space-around' }}
+        sx={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-around'
+        }}
       >
         {pages.map(page => (
           <Link
