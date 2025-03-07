@@ -40,7 +40,11 @@ const getTheme = ({ darkMode }: GetThemeOptions): Theme =>
       },
       body1: {
         fontFamily: 'Outfit, sans-serif',
+<<<<<<< HEAD
         fontSize: '14px',
+=======
+        fontSize: '10px',
+>>>>>>> 9a1c333 (I have reduced the navbar size and fonts)
         fontWeight: 500
       },
       body2: {
