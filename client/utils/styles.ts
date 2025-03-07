@@ -40,7 +40,7 @@ const getTheme = ({ darkMode }: GetThemeOptions): Theme =>
       },
       body1: {
         fontFamily: 'Outfit, sans-serif',
-        fontSize: '10px',
+        fontSize: '14px',
         fontWeight: 500
       },
       body2: {
