@@ -10,13 +10,18 @@ import Header from './Components/Header';
 
 export default function Home() {
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box
+      sx={{
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column'
+      }}
+    >
       <Box
         sx={{
-          height: '100vh',
+          maxHeight: '100vh',
           display: 'flex',
-          flexDirection: 'column',
-          overflow: 'hidden'
+          flexDirection: 'column'
         }}
       >
         <Header />
@@ -24,10 +29,12 @@ export default function Home() {
           <Homescreen />
         </Box>
       </Box>
-      <About />
-      <Technologies />
-      <Work />
-      <Footer />
+      {/* <Box>
+        <About />
+        <Technologies />
+        <Work />
+      </Box>
+      <Footer /> */}
     </Box>
   );
 }

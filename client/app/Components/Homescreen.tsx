@@ -25,11 +25,10 @@ const Homescreen = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: '100vh',
-        mt: { xs: '80px', md: '20px' },
-        transition: 'opacity 0.5s ease-in-out',
+        height: '100%',
+        mt: { xs: '80px', md: '15px' },
+        transition: 'opacity 0.5s ease-in-out'
         // opacity: showContent ? 1 : 0, // Fade out effect
-        position: 'relative'
       }}
     >
       {/* {showContent && ( */}
@@ -39,7 +38,7 @@ const Homescreen = () => {
           sx={{
             textAlign: 'center',
             width: { xs: '50%', md: '30%' },
-            mb: '20px'
+            mb: '15px'
           }}
         >
           <Typography component="span" variant="h1">
@@ -52,8 +51,8 @@ const Homescreen = () => {
           sx={{
             textAlign: 'center',
             color: '#6B6B6B',
-            mb: '60px',
-            width: { xs: '40%' }
+            mb: { xs: '60px', md: '20px' },
+            width: { xs: '50%' }
           }}
         >
           And This is my portfolio showcase
@@ -64,13 +63,15 @@ const Homescreen = () => {
             borderWidth: '1px',
             borderStyle: 'solid',
             borderRadius: '150px',
-            padding: '20px',
-            mb: { xs: '80px', md: '40px' }
+            padding: '10px',
+            mb: { xs: '80px', md: '20px' }
           }}
         >
           <Box
             sx={{
               background: '#E6AF2E',
+              width: { xs: '200px', md: '150px' },
+              height: { xs: '300px', md: '220px' },
               borderRadius: '150px',
               display: 'flex',
               justifyContent: 'center',
@@ -80,11 +81,11 @@ const Homescreen = () => {
             <img
               src="../../Images/User-Image.png"
               alt=""
-              style={{ borderRadius: '150px' }}
+              style={{ borderRadius: '150px', height: '100%', width: '100%' }}
             />
           </Box>
         </Box>
-        <Box display="flex" justifyContent="center" mt={4}>
+        <Box display="flex" justifyContent="center">
           {isMobile ? (
             <motion.div
               drag="y"

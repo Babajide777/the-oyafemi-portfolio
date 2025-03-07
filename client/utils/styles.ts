@@ -23,6 +23,18 @@ declare module '@mui/material/Typography' {
 
 const getTheme = ({ darkMode }: GetThemeOptions): Theme =>
   createTheme({
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          '*': {
+            margin: 0,
+            padding: 0,
+            boxSizing: 'content-box'
+          }
+        }
+      }
+    },
+
     typography: {
       fontFamily: 'Cormorant SC, serif',
       h1: { fontSize: '40px', fontWeight: 400 },
