@@ -64,14 +64,14 @@ const Homescreen = () => {
             borderStyle: 'solid',
             borderRadius: '150px',
             padding: '10px',
-            mb: { xs: '80px', md: '20px' }
+            mb: { xs: '80px', md: '23px' }
           }}
         >
           <Box
             sx={{
               background: '#E6AF2E',
               width: { xs: '200px', md: '150px' },
-              height: { xs: '300px', md: '220px' },
+              height: { xs: '300px', md: '220px', lg: '230px' },
               borderRadius: '150px',
               display: 'flex',
               justifyContent: 'center',
@@ -119,9 +119,10 @@ const Homescreen = () => {
                 typography: 'body1',
                 background: '#E6AF2E',
                 color: '#000000',
-                height: { xs: '100px', md: '70px' },
+                height: { xs: '100px', md: '50px', lg: '60px' },
                 width: { xs: '100px', md: '600px' },
-                borderRadius: '150px 150px 0 0'
+                borderRadius: '150px 150px 0 0',
+                textTransform: 'none'
               }}
             >
               Click here to continue
