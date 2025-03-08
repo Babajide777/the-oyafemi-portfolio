@@ -12,15 +12,9 @@ export default function Header() {
       position="static"
       sx={{
         display: { xs: 'none', md: 'flex' },
-        alignItems: 'center',
-        justifyContent: 'center',
         margin: '0 auto',
         width: '90%',
-<<<<<<< HEAD
-        height: '50px',
-=======
         height: '30px',
->>>>>>> 9a1c333 (I have reduced the navbar size and fonts)
         marginTop: '15px',
         borderRadius: '40px',
         boxShadow: '0px 4px 30px 0px #B333E914',
@@ -28,13 +22,7 @@ export default function Header() {
       }}
     >
       <Toolbar
-        sx={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-around'
-        }}
+        sx={{ width: '100', display: 'flex', justifyContent: 'space-around' }}
       >
         {pages.map(page => (
           <Link
