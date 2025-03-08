@@ -29,12 +29,12 @@ export default function Home() {
           <Homescreen />
         </Box>
       </Box>
-      {/* <Box>
+      <Box>
         <About />
         <Technologies />
         <Work />
       </Box>
-      <Footer /> */}
+      <Footer />
     </Box>
   );
 }

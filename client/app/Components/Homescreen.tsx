@@ -11,12 +11,12 @@ const Homescreen = () => {
     setIsMobile(window.innerWidth < 900);
   }, []);
 
-  // const navigateToNextPage = () => {
-  //   setShowContent(false); // Hide current content
-  //   setTimeout(() => {
-  //     window.location.href = `#${pages[0].toLowerCase()}`; // Navigate to next page
-  //   }, 500); // Delay for smooth transition
-  // };
+  const navigateToNextPage = () => {
+    setShowContent(false); // Hide current content
+    setTimeout(() => {
+      window.location.href = `#${pages[0].toLowerCase()}`; // Navigate to next page
+    }, 500); // Delay for smooth transition
+  };
 
   return (
     <Box
@@ -37,7 +37,7 @@ const Homescreen = () => {
           variant="h2"
           sx={{
             textAlign: 'center',
-            width: { xs: '50%', md: '30%' },
+            width: { xs: '46%', md: '30%', lg: '25%' },
             mb: '15px'
           }}
         >
@@ -64,7 +64,7 @@ const Homescreen = () => {
             borderStyle: 'solid',
             borderRadius: '150px',
             padding: '10px',
-            mb: { xs: '80px', md: '23px' }
+            mb: { xs: '148px', md: '23px' }
           }}
         >
           <Box
@@ -92,7 +92,7 @@ const Homescreen = () => {
               dragConstraints={{ top: -100, bottom: 0 }}
               onDragEnd={(event, info) => {
                 if (info.offset.y < -50) {
-                  // navigateToNextPage();
+                  navigateToNextPage();
                 }
               }}
               style={{ cursor: 'grab' }}
@@ -103,7 +103,7 @@ const Homescreen = () => {
                   typography: 'body1',
                   background: '#E6AF2E',
                   color: '#000000',
-                  height: { xs: '100px', md: '70px' },
+                  height: { xs: '80px', md: '70px' },
                   width: { xs: '350px', md: '600px' },
                   borderRadius: '150px 150px 0 0'
                 }}
