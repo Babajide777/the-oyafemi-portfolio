@@ -37,6 +37,9 @@ const About = () => {
           <img src="../../Images/AboutUs-Image-3.jpg" alt="AboutUs-Image-3" />
         </Box>
       </Box>
+      <Box>
+        <img src="../../Images/Mask group.png" alt="Click-mouse" />
+      </Box>
     </Box>
   );
 };
