@@ -106,7 +106,8 @@ const Homescreen = () => {
                     color: '#000000',
                     height: { xs: '80px', md: '70px' },
                     width: { xs: '350px', md: '600px' },
-                    borderRadius: '150px 150px 0 0'
+                    borderRadius: '150px 150px 0 0',
+                    textTransform: 'none'
                   }}
                 >
                   Drag up to continue
