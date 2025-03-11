@@ -90,6 +90,7 @@ const Homescreen = () => {
               <motion.div
                 drag="y"
                 dragConstraints={{ top: -100, bottom: 0 }}
+                dragSnapToOrigin={true}
                 onDragEnd={(event, info) => {
                   if (info.offset.y < -50) {
                     navigateToNextPage();
