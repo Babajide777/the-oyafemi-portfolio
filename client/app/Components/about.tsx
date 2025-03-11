@@ -26,6 +26,17 @@ const About = () => {
         I am particularly interested in start-up and small scale businesses as I
         have a lot of experience working in this niche.
       </Typography>
+      <Box>
+        <Box>
+          <img src="../../Images/AboutUs-Image-1.jpg" alt="AboutUs-Image-1" />
+        </Box>
+        <Box>
+          <img src="../../Images/AboutUs-Image-2.jpg" alt="AboutUs-Image-2" />
+        </Box>
+        <Box>
+          <img src="../../Images/AboutUs-Image-3.jpg" alt="AboutUs-Image-3" />
+        </Box>
+      </Box>
     </Box>
   );
 };
