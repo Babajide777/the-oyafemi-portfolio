@@ -16,7 +16,7 @@ const About = () => {
       id="about"
       sx={{
         width: '100%',
-        height: '100vh',
+        minHeight: '100svh',
         background: '#E6AF2E',
         display: 'flex',
         flexDirection: 'column',
