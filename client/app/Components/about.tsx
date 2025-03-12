@@ -1,18 +1,27 @@
+import pages from '@/utils/data';
 import { Box, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 
 const About = () => {
+  const [showContent, setShowContent] = useState(true);
+
+  const navigateToNextPage = () => {
+    setTimeout(() => {
+      window.location.href = `#${pages[1].toLowerCase()}`;
+    }, 500);
+  };
+
   return (
     <Box
       id="about"
       sx={{
         width: '100%',
-        height: 'calc(100vh + 10px)',
+        height: '100vh',
         background: '#E6AF2E',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: '40px 0px'
+        paddingTop: '40px'
       }}
     >
       <Typography component="h3" variant="h3" sx={{ paddingBottom: '30px' }}>
@@ -49,8 +58,8 @@ const About = () => {
       >
         <Box
           sx={{
-            width: { xs: '100px', sm: '150px', md: '200px' }, // Adjusts size by breakpoint
-            height: { xs: '100px', sm: '150px', md: '200px' },
+            width: { xs: '110px', sm: '150px', md: '200px' }, // Adjusts size by breakpoint
+            height: { xs: '110px', sm: '150px', md: '200px' },
             gridArea: 'a',
             borderRadius: '50%',
             marginLeft: '50px',
@@ -70,8 +79,8 @@ const About = () => {
         </Box>
         <Box
           sx={{
-            width: { xs: '100px', sm: '150px', md: '200px' }, // Adjusts size by breakpoint
-            height: { xs: '100px', sm: '150px', md: '200px' },
+            width: { xs: '110px', sm: '150px', md: '200px' }, // Adjusts size by breakpoint
+            height: { xs: '110px', sm: '150px', md: '200px' },
             gridArea: 'c',
             borderRadius: '50%'
           }}
@@ -89,8 +98,8 @@ const About = () => {
         </Box>
         <Box
           sx={{
-            width: { xs: '100px', sm: '150px', md: '200px' }, // Adjusts size by breakpoint
-            height: { xs: '100px', sm: '150px', md: '200px' },
+            width: { xs: '110px', sm: '150px', md: '200px' }, // Adjusts size by breakpoint
+            height: { xs: '110px', sm: '150px', md: '200px' },
             gridArea: 'b',
             borderRadius: '50%'
           }}
@@ -109,7 +118,7 @@ const About = () => {
           />
         </Box>
       </Box>
-      <Box sx={{ marginTop: '100px' }}>
+      <Box sx={{ marginTop: '120px' }} onClick={navigateToNextPage}>
         <img src="../../Images/Mask group.png" alt="Click-mouse" />
       </Box>
     </Box>
