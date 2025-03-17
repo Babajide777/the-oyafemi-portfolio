@@ -24,7 +24,7 @@ const Homescreen = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: '100vh',
+        minHeight: '100svh',
         overflow: 'hidden',
         mt: { xs: '80px', md: '15px' },
         transition: 'opacity 0.5s ease-in-out',
