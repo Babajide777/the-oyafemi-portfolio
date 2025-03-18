@@ -15,13 +15,58 @@ const About = () => {
     <Box
       id="about"
       sx={{
+        position: 'relative',
         width: '100%',
         minHeight: '100svh',
         background: '#E6AF2E',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        paddingTop: { xs: '40px', md: '20px' }
+        paddingTop: { xs: '40px', md: '20px' },
+        /* Define the CSS variables for the wave */
+        '--s': '250px', // size of the wave
+        '--b': '40px', // thickness of the line
+        '--m': '1.5', // curvature of the wave [0,2]
+        '--R': 'calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2)',
+        '--_g':
+          '#0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%',
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: 'calc(2 * var(--R))',
+          background: 'rgba(255, 255, 255, 0.3)',
+          backgroundSize: 'cover',
+          /* Apply the wave mask using our custom properties */
+          mask: `
+            radial-gradient(
+              var(--R) at left 50% bottom calc(-1 * var(--m) * var(--s)), 
+              var(--_g)
+            ) calc(50% - 2 * var(--s)) calc(50% - var(--s)/2 - var(--b)/2)
+              / calc(4 * var(--s)) calc(var(--s) + var(--b)) repeat-x,
+            radial-gradient(
+              var(--R) at left 50% top calc(-1 * var(--m) * var(--s)), 
+              var(--_g)
+            ) 50% calc(50% + var(--s)/2 + var(--b)/2)
+              / calc(4 * var(--s)) calc(var(--s) + var(--b)) repeat-x
+          `,
+          WebkitMask: `
+            radial-gradient(
+              var(--R) at left 50% bottom calc(-1 * var(--m) * var(--s)), 
+              var(--_g)
+            ) calc(50% - 2 * var(--s)) calc(50% - var(--s)/2 - var(--b)/2)
+              / calc(4 * var(--s)) calc(var(--s) + var(--b)) repeat-x,
+            radial-gradient(
+              var(--R) at left 50% top calc(-1 * var(--m) * var(--s)), 
+              var(--_g)
+            ) 50% calc(50% + var(--s)/2 + var(--b)/2)
+              / calc(4 * var(--s)) calc(var(--s) + var(--b)) repeat-x
+          `,
+          maskRepeat: 'repeat-x',
+          WebkitMaskRepeat: 'repeat-x'
+        }
       }}
     >
       <Typography component="h3" variant="h3" sx={{ paddingBottom: '15px' }}>
