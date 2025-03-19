@@ -3,7 +3,7 @@ import React from 'react';
 
 const Technologies = () => {
   return (
-    <Box>
+    <Box id="technologies">
       <Typography>TECHNOLOGIES</Typography>
     </Box>
   );
