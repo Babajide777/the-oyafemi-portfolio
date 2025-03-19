@@ -1,6 +1,6 @@
 'use client';
 
-import { AppBar, Container, Menu, Toolbar, Typography } from '@mui/material';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
 import pages from '@/utils/data';
@@ -42,7 +42,9 @@ export default function Header() {
                 color: '#3C3C3C',
                 textAlign: 'center',
                 cursor: 'pointer',
-                mx: 2
+                mx: 2,
+                fontSize: '14px',
+                fontWeight: '500'
               }}
               variant="body1"
             >
