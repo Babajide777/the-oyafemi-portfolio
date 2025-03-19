@@ -32,21 +32,33 @@ const Homescreen = () => {
       }}
     >
       <Typography
-        variant="h2"
+        variant="h1"
         sx={{
+          fontSize: '44px',
+          fontWeight: '600',
           textAlign: 'center',
-          width: { xs: '46%', md: '30%', lg: '25%' },
+          width: { xs: '51%', md: '35%', lg: '30%' },
           mb: '15px'
         }}
       >
-        <Typography component="span" variant="h1">
+        <Typography
+          component="span"
+          variant="h1"
+          sx={{
+            fontSize: '44px',
+            fontWeight: '400',
+            textTransform: 'capitalize'
+          }}
+        >
           My Name is
         </Typography>{' '}
         Babajide Oyafemi
       </Typography>
       <Typography
-        variant="body2"
+        variant="body1"
         sx={{
+          fontWeight: '400',
+          fontSize: '14px',
           textAlign: 'center',
           color: '#6B6B6B',
           mb: { xs: '60px', md: '20px' },
@@ -62,7 +74,7 @@ const Homescreen = () => {
           borderStyle: 'solid',
           borderRadius: '150px',
           padding: '10px',
-          mb: { xs: '148px', md: '23px' }
+          mb: { xs: '141px', md: '23px' }
         }}
       >
         <Box
@@ -99,6 +111,7 @@ const Homescreen = () => {
             <Button
               variant="contained"
               sx={{
+                fontWeight: '500',
                 typography: 'body1',
                 background: '#E6AF2E',
                 color: '#000000',
@@ -117,9 +130,11 @@ const Homescreen = () => {
             onClick={navigateToNextPage}
             sx={{
               typography: 'body1',
+              fontWeight: '500',
+              fontSize: '15px',
               background: '#E6AF2E',
               color: '#000000',
-              height: { xs: '100px', md: '50px', lg: '60px' },
+              height: { xs: '100px', md: '50px', lg: '55px' },
               width: { xs: '100px', md: '600px' },
               borderRadius: '150px 150px 0 0',
               textTransform: 'none'
