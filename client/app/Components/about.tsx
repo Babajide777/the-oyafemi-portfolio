@@ -15,7 +15,7 @@ const About = () => {
     <Box
       id="about"
       sx={{
-        position: 'relative',
+        position: 'relative', // Needed for pseudo-element positioning
         width: '100%',
         minHeight: '100svh',
         background: '#E6AF2E',
@@ -23,49 +23,17 @@ const About = () => {
         flexDirection: 'column',
         alignItems: 'center',
         paddingTop: { xs: '40px', md: '20px' },
-        /* Define the CSS variables for the wave */
-        '--s': '250px', // size of the wave
-        '--b': '40px', // thickness of the line
-        '--m': '1.5', // curvature of the wave [0,2]
-        '--R': 'calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2)',
-        '--_g':
-          '#0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%',
+        // Add a pseudo-element for the wavy line:
         '&::after': {
           content: '""',
           position: 'absolute',
-          bottom: 0,
-          left: 0,
+          bottom: '100px',
+          left: '0',
           width: '100%',
-          height: 'calc(2 * var(--R))',
-          background: 'rgba(255, 255, 255, 0.3)',
-          backgroundSize: 'cover',
-          /* Apply the wave mask using our custom properties */
-          mask: `
-            radial-gradient(
-              var(--R) at left 50% bottom calc(-1 * var(--m) * var(--s)), 
-              var(--_g)
-            ) calc(50% - 2 * var(--s)) calc(50% - var(--s)/2 - var(--b)/2)
-              / calc(4 * var(--s)) calc(var(--s) + var(--b)) repeat-x,
-            radial-gradient(
-              var(--R) at left 50% top calc(-1 * var(--m) * var(--s)), 
-              var(--_g)
-            ) 50% calc(50% + var(--s)/2 + var(--b)/2)
-              / calc(4 * var(--s)) calc(var(--s) + var(--b)) repeat-x
-          `,
-          WebkitMask: `
-            radial-gradient(
-              var(--R) at left 50% bottom calc(-1 * var(--m) * var(--s)), 
-              var(--_g)
-            ) calc(50% - 2 * var(--s)) calc(50% - var(--s)/2 - var(--b)/2)
-              / calc(4 * var(--s)) calc(var(--s) + var(--b)) repeat-x,
-            radial-gradient(
-              var(--R) at left 50% top calc(-1 * var(--m) * var(--s)), 
-              var(--_g)
-            ) 50% calc(50% + var(--s)/2 + var(--b)/2)
-              / calc(4 * var(--s)) calc(var(--s) + var(--b)) repeat-x
-          `,
-          maskRepeat: 'repeat-x',
-          WebkitMaskRepeat: 'repeat-x'
+          height: '300px', // adjust height as needed
+          background: 'url("../../Images/Vector 3.png") no-repeat',
+          backgroundSize: '100% 100%'
+          // backgroundAttachment: 'fixed'
         }
       }}
     >
