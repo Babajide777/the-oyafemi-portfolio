@@ -25,15 +25,15 @@ const About = () => {
         paddingTop: { xs: '40px', md: '20px' },
         // Add a pseudo-element for the wavy line:
         '&::after': {
+          display: { xs: 'none', md: 'block' },
           content: '""',
           position: 'absolute',
-          bottom: '100px',
+          bottom: '150px',
           left: '0',
           width: '100%',
           height: '300px', // adjust height as needed
           background: 'url("../../Images/Vector 3.png") no-repeat',
           backgroundSize: '100% 100%'
-          // backgroundAttachment: 'fixed'
         }
       }}
     >
@@ -76,15 +76,16 @@ const About = () => {
         `,
             md: `'a c b'`
           },
-          justifyContent: 'space-evenly',
+          justifyContent: 'center',
+          columnGap: { md: '150px' },
           width: '100%',
           maxWidth: '100%'
         }}
       >
         <Box
           sx={{
-            width: { xs: '110px', sm: '150px', md: '180px' }, // Adjusts size by breakpoint
-            height: { xs: '110px', sm: '150px', md: '180px' },
+            width: { xs: '110px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
+            height: { xs: '110px', sm: '150px', md: '220px' },
             gridArea: 'a',
             borderRadius: '50%',
             marginLeft: { xs: '50px', md: '0' },
@@ -104,8 +105,8 @@ const About = () => {
         </Box>
         <Box
           sx={{
-            width: { xs: '110px', sm: '150px', md: '180px' }, // Adjusts size by breakpoint
-            height: { xs: '110px', sm: '150px', md: '180px' },
+            width: { xs: '110px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
+            height: { xs: '110px', sm: '150px', md: '220px' },
             gridArea: 'c',
             borderRadius: '50%',
             marginTop: { md: '30px' }
@@ -124,8 +125,8 @@ const About = () => {
         </Box>
         <Box
           sx={{
-            width: { xs: '110px', sm: '150px', md: '180px' }, // Adjusts size by breakpoint
-            height: { xs: '110px', sm: '150px', md: '180px' },
+            width: { xs: '110px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
+            height: { xs: '110px', sm: '150px', md: '220px' },
             gridArea: 'b',
             borderRadius: '50%',
             marginLeft: { xs: '-50px', md: '0' },
