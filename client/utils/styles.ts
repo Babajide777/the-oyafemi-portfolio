@@ -24,40 +24,9 @@ declare module '@mui/material/Typography' {
 const getTheme = ({ darkMode }: GetThemeOptions): Theme =>
   createTheme({
     typography: {
-      fontFamily: 'Cormorant SC, serif',
-      h1: { fontSize: '72px', fontWeight: 400 },
-      h2: { fontSize: '72px', fontWeight: 600 },
-      h3: { fontSize: '56px', fontWeight: 700 },
-      h4: {
-        fontFamily: 'Outfit, sans-serif',
-        fontSize: '20px',
-        fontWeight: 900
-      },
-      h5: {
-        fontFamily: 'Outfit, sans-serif',
-        fontSize: '32px',
-        fontWeight: 700
-      },
-      body1: {
-        fontFamily: 'Outfit, sans-serif',
-        fontSize: '20px',
-        fontWeight: 500
-      },
-      body2: {
-        fontFamily: 'Outfit, sans-serif',
-        fontSize: '24px',
-        fontWeight: 400
-      },
-      body3: {
-        fontFamily: 'Outfit, sans-serif',
-        fontSize: '20px',
-        fontWeight: 400
-      },
-      body4: {
-        fontFamily: 'Outfit, sans-serif',
-        fontSize: '16px',
-        fontWeight: 400
-      }
+      fontFamily: '"Cormorant SC", "Outfit", sans-serif',
+      h1: { fontFamily: '"Cormorant SC", serif' },
+      body1: { fontFamily: '"Outfit", sans-serif' }
     },
     palette: {
       mode: darkMode ? 'dark' : 'light',
