@@ -37,7 +37,7 @@ const Homescreen = () => {
           fontSize: '44px',
           fontWeight: '600',
           textAlign: 'center',
-          width: { xs: '51%', md: '35%' },
+          width: { xs: '51%', md: '35%', lg: '30%' },
           mb: '15px'
         }}
       >
@@ -55,8 +55,9 @@ const Homescreen = () => {
         Babajide Oyafemi
       </Typography>
       <Typography
-        variant="body2"
+        variant="body1"
         sx={{
+          fontWeight: '400',
           textAlign: 'center',
           color: '#6B6B6B',
           mb: { xs: '60px', md: '20px' },
