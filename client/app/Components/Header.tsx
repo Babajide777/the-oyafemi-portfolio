@@ -16,7 +16,7 @@ export default function Header() {
         justifyContent: 'center',
         margin: '0 auto',
         width: '90%',
-        height: '30px',
+        height: '50px',
         marginTop: '15px',
         borderRadius: '40px',
         boxShadow: '0px 4px 30px 0px #B333E914',
@@ -44,7 +44,7 @@ export default function Header() {
                 textAlign: 'center',
                 cursor: 'pointer',
                 mx: 2,
-                fontSize: '12px',
+                fontSize: '14px',
                 fontWeight: '500'
               }}
               variant="body1"
