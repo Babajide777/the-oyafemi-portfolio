@@ -32,14 +32,24 @@ const Homescreen = () => {
       }}
     >
       <Typography
-        variant="h2"
+        variant="h1"
         sx={{
+          fontSize: '44px',
+          fontWeight: '600',
           textAlign: 'center',
-          width: { xs: '46%', md: '30%', lg: '25%' },
+          width: { xs: '51%', md: '35%' },
           mb: '15px'
         }}
       >
-        <Typography component="span" variant="h1">
+        <Typography
+          component="span"
+          variant="h1"
+          sx={{
+            fontSize: '44px',
+            fontWeight: '400',
+            textTransform: 'capitalize'
+          }}
+        >
           My Name is
         </Typography>{' '}
         Babajide Oyafemi
