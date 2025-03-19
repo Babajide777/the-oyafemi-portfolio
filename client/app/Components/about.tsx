@@ -22,7 +22,7 @@ const About = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        paddingTop: { xs: '40px', md: '20px' },
+        paddingTop: { xs: '60px', md: '20px' },
         // Add a pseudo-element for the wavy line:
         '&::after': {
           display: { xs: 'none', md: 'block' },
@@ -37,15 +37,21 @@ const About = () => {
         }
       }}
     >
-      <Typography component="h3" variant="h3" sx={{ paddingBottom: '15px' }}>
+      <Typography
+        component="h3"
+        variant="h1"
+        sx={{ fontWeight: '700', paddingBottom: '25px', fontSize: '40px' }}
+      >
         About me
       </Typography>
       <Typography
         component="p"
-        variant="body3"
+        variant="body1"
         sx={{
+          fontWeight: '400',
+          fontSize: '16px',
           textAlign: 'center',
-          width: { xs: '77%', md: '65%' },
+          width: { xs: '63%', md: '65%' },
           paddingBottom: '20px'
         }}
       >
@@ -57,8 +63,10 @@ const About = () => {
         component="p"
         variant="body3"
         sx={{
+          fontWeight: '400',
+          fontSize: '16px',
           textAlign: 'center',
-          width: { xs: '77%', md: '65%' },
+          width: { xs: '63%', md: '65%' },
           paddingBottom: { xs: '60px', md: '35px' }
         }}
       >
@@ -84,11 +92,11 @@ const About = () => {
       >
         <Box
           sx={{
-            width: { xs: '110px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
-            height: { xs: '110px', sm: '150px', md: '220px' },
+            width: { xs: '135px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
+            height: { xs: '135px', sm: '150px', md: '220px' },
             gridArea: 'a',
             borderRadius: '50%',
-            marginLeft: { xs: '50px', md: '0' },
+            marginLeft: { xs: '10px', md: '0' },
             marginTop: '-20px'
           }}
         >
@@ -105,8 +113,8 @@ const About = () => {
         </Box>
         <Box
           sx={{
-            width: { xs: '110px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
-            height: { xs: '110px', sm: '150px', md: '220px' },
+            width: { xs: '135px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
+            height: { xs: '135px', sm: '150px', md: '220px' },
             gridArea: 'c',
             borderRadius: '50%',
             marginTop: { md: '30px' }
@@ -125,11 +133,11 @@ const About = () => {
         </Box>
         <Box
           sx={{
-            width: { xs: '110px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
-            height: { xs: '110px', sm: '150px', md: '220px' },
+            width: { xs: '135px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
+            height: { xs: '135px', sm: '150px', md: '220px' },
             gridArea: 'b',
             borderRadius: '50%',
-            marginLeft: { xs: '-50px', md: '0' },
+            marginLeft: { xs: '-70px', md: '0' },
             marginTop: { md: '-20px' }
           }}
         >
