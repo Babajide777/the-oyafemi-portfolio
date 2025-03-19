@@ -43,7 +43,9 @@ export default function Header() {
                 color: '#3C3C3C',
                 textAlign: 'center',
                 cursor: 'pointer',
-                mx: 2
+                mx: 2,
+                fontSize: '12px',
+                fontWeight: '500'
               }}
               variant="body1"
             >
