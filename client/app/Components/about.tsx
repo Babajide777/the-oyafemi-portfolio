@@ -33,7 +33,8 @@ const About = () => {
           width: '100%',
           height: '300px', // adjust height as needed
           background: 'url("../../Images/Vector 3.png") no-repeat',
-          backgroundSize: '100% 100%'
+          backgroundSize: '100% 100%',
+          zIndex: -100
         }
       }}
     >
@@ -51,7 +52,7 @@ const About = () => {
           fontWeight: '400',
           fontSize: '16px',
           textAlign: 'center',
-          width: { xs: '63%', md: '65%' },
+          width: { xs: '63%', md: '52%' },
           paddingBottom: '20px'
         }}
       >
@@ -66,7 +67,7 @@ const About = () => {
           fontWeight: '400',
           fontSize: '16px',
           textAlign: 'center',
-          width: { xs: '63%', md: '65%' },
+          width: { xs: '63%', md: '53%' },
           paddingBottom: { xs: '60px', md: '35px' }
         }}
       >
@@ -85,7 +86,7 @@ const About = () => {
             md: `'a c b'`
           },
           justifyContent: 'center',
-          columnGap: { md: '150px' },
+          columnGap: { md: '130px' },
           width: '100%',
           maxWidth: '100%'
         }}
