@@ -16,15 +16,15 @@ const Homescreen = () => {
       window.location.href = `#${pages[0].toLowerCase()}`;
     }, 500);
   };
-
   return (
     <Box
       component="section"
       sx={{
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        minHeight: '100svh',
+        minHeight: {xs:'91dvh',md:'87vh',lg:'85.5vh'},
         overflow: 'hidden',
         mt: { xs: '80px', md: '15px' },
         transition: 'opacity 0.5s ease-in-out',
@@ -38,7 +38,7 @@ const Homescreen = () => {
           fontWeight: '600',
           textAlign: 'center',
           width: { xs: '51%', md: '35%', lg: '30%' },
-          mb: '15px'
+          mb: {md:'15px' },
         }}
       >
         <Typography
@@ -61,7 +61,7 @@ const Homescreen = () => {
           fontSize: '14px',
           textAlign: 'center',
           color: '#6B6B6B',
-          mb: { xs: '60px', md: '20px' },
+          mb: { xs: '60px', md: '20px', lg: '15px' },
           width: { xs: '50%' }
         }}
       >
@@ -74,14 +74,14 @@ const Homescreen = () => {
           borderStyle: 'solid',
           borderRadius: '150px',
           padding: '10px',
-          mb: { xs: '141px', md: '23px' }
+          mb: { xs: '141px', md: '23px', lg: '15px' },
         }}
       >
         <Box
           sx={{
             background: '#E6AF2E',
             width: { xs: '200px', md: '150px' },
-            height: { xs: '300px', md: '220px', lg: '230px' },
+            height: { xs: '300px', md: '220px', lg: '210px' },
             borderRadius: '150px',
             display: 'flex',
             justifyContent: 'center',
@@ -134,8 +134,8 @@ const Homescreen = () => {
               fontSize: '15px',
               background: '#E6AF2E',
               color: '#000000',
-              height: { xs: '100px', md: '50px', lg: '55px' },
-              width: { xs: '100px', md: '600px' },
+              height: { xs: '100px', md: '50px', lg: '50px' },
+              width: { xs: '100px', md: '550px', lg: '450px' },
               borderRadius: '150px 150px 0 0',
               textTransform: 'none'
             }}
