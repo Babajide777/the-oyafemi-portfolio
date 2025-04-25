@@ -41,7 +41,7 @@ const About = () => {
       <Typography
         component="h3"
         variant="h1"
-        sx={{ fontWeight: '700', paddingBottom: '25px', fontSize: '40px' }}
+        sx={{ fontWeight: '700', paddingBottom: '15px', fontSize: '40px' }}
       >
         About me
       </Typography>
@@ -68,7 +68,7 @@ const About = () => {
           fontSize: '16px',
           textAlign: 'center',
           width: { xs: '63%', md: '53%' },
-          paddingBottom: { xs: '60px', md: '35px' }
+          paddingBottom: { xs: '60px', md: '35px', lg:'25px' }
         }}
       >
         I am particularly interested in start-up and small scale businesses as I
@@ -155,7 +155,7 @@ const About = () => {
         </Box>
       </Box>
       <Box
-        sx={{ marginTop: { xs: '120px', md: '20px' } }}
+        sx={{ marginTop: { xs: '120px', md: '20px', cursor:'pointer' } }}
         onClick={navigateToNextPage}
       >
         <img src="../../Images/Mask group.png" alt="Click-mouse" />
