@@ -4,14 +4,14 @@ import React from 'react';
 const Technologies = () => {
   return (
     <Box id="technologies" component='section' sx={{width: '100%',
-      // minHeight: '40vh',
+      minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       paddingTop:  '40px' }}>
       <Typography 
       component="h3"
-      variant="h1" sx={{ fontWeight: '700', paddingBottom: '30px', fontSize: '30px' }}>TECHNOLOGIES</Typography>
+      variant="h1" sx={{ fontWeight: '700', paddingBottom: '30px', fontSize: {xs:'30px',md:'40px'} }}>TECHNOLOGIES</Typography>
       <Typography 
       component="p"
       variant="body1" sx={{
