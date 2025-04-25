@@ -39,7 +39,7 @@ const Technologies = () => {
         <img src="../../Images/boba-software-developer-workplace.png" alt="workplace-image" style={{width:'251px',height:'230px'}}/>
         </Box>
       </Box>
-      <Divider />
+      <Divider sx={{margin:'40px 0', background:'#E6AF2E'}}/>
       </Box>
         </Box> 
   );
