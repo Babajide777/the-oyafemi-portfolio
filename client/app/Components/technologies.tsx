@@ -21,8 +21,8 @@ const Technologies = () => {
         width: { xs: '63%', md: '45%' },
         paddingBottom: '40px'
       }}>I am conversant with a range of JavaScript and TypeScript frontend, backend and CSS libraries and frameworks used in building web solutions such as React, Express, Node, BootStrap, Material UI, JQuery, and lots more.</Typography>
-      <Box component='div' sx={{width: { xs: '90%', md: '70%' }, paddingBottom: '10px'}}>
-      <Box component='div' sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: { xs: '100%', md: '45%' }, paddingBottom: '20px'}}>
+      <Box component='div' sx={{width: { xs: '90%', md: '80%' }, paddingBottom: '10px'}}>
+      <Box component='div' sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: { xs: '100%', md: '60%' }, paddingBottom: '20px'}}>
         <Typography component="h6"
       variant="body1" sx={{fontWeight: '900',
         fontSize: '16px',textTransform:'uppercase', borderBottom:'4px solid #E6AF2E', paddingBottom:'5px', color:'#2B2B2B'}}>Frontend</Typography>
