@@ -4,7 +4,7 @@ import React from 'react';
 const Technologies = () => {
   return (
     <Box id="technologies" component='section' sx={{width: '100%',
-      minHeight: '40vh',
+      // minHeight: '40vh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -33,10 +33,10 @@ const Technologies = () => {
       variant="body1" sx={{fontWeight: '400',
         fontSize: '16px',textTransform:'uppercase', color:'#2B2B2B'}}>Technical writing</Typography>
         </Box>
-      <Box component='div'>
-        <Typography>Experience withReactJs, VanillaJS, and JQuery</Typography>
+      <Box component='div' sx={{border:'1px solid #C8C8C8', borderRadius:'16px', display:'flex', flexDirection:'column',alignItems:'center', justifyContent:'center',padding:'50px'}}>
+        <Typography sx={{textAlign:'center'}}>Experience with ReactJs, VanillaJS, and JQuery</Typography>
         <Box component='div'>
-        <img src="../../Images/boba-software-developer-workplace.png" alt="workplace-image" />
+        <img src="../../Images/boba-software-developer-workplace.png" alt="workplace-image" style={{width:'251px',height:'230px'}}/>
         </Box>
       </Box>
       <Divider />
