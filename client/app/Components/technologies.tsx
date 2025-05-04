@@ -4,7 +4,7 @@ import React from 'react';
 const Technologies = () => {
   return (
     <Box id="technologies" component='section' sx={{width: '100%',
-      minHeight: '100vh',
+      minHeight: '50vh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -19,9 +19,9 @@ const Technologies = () => {
         fontSize: '16px',
         textAlign: 'center',
         width: { xs: '63%', md: '45%' },
-        paddingBottom: '40px'
+        paddingBottom: '60px'
       }}>I am conversant with a range of JavaScript and TypeScript frontend, backend and CSS libraries and frameworks used in building web solutions such as React, Express, Node, BootStrap, Material UI, JQuery, and lots more.</Typography>
-      <Box component='div' sx={{width: { xs: '90%', md: '80%' }, paddingBottom: '10px'}}>
+      <Box component='div' sx={{width: { xs: '90%', md: '80%' }}}>
       <Box component='div' sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: { xs: '100%', md: '50%' }, paddingBottom: '20px'}}>
         <Typography component="h6"
       variant="body1" sx={{fontWeight: '900',
@@ -33,11 +33,9 @@ const Technologies = () => {
       variant="body1" sx={{fontWeight: '400',
         fontSize: '16px',textTransform:'uppercase', color:'#2B2B2B'}}>Technical writing</Typography>
         </Box>
-      <Box component='div' sx={{border:'1px solid #C8C8C8', borderRadius:'16px', display:'flex', flexDirection:{xs:'column', md:'row'}, alignItems:'center', justifyContent:{xs:'center', md:'space-between'},padding:{xs:'50px', md:'0 20px'}}}>
-        <Typography sx={{textAlign:{xs:'center',md:'left'}, width:{md:'35%', lg:'28%'}}}>Experience with ReactJs, VanillaJS, and JQuery</Typography>
-        <Box component='div'>
-        <img src="../../Images/boba-software-developer-workplace.png" alt="workplace-image" style={{width:'251px',height:'230px'}}/>
-        </Box>
+      <Box component='div' sx={{border:'1px solid #C8C8C8', borderRadius:'16px', display:'flex', flexDirection:{xs:'column', md:'row'}, alignItems:'center', justifyContent:{xs:'center', md:'space-between'},padding:{xs:'0 50px'}}}>
+        <Typography sx={{textAlign:{xs:'center',md:'left'}, width:{md:'35%', lg:'28%'}, paddingTop:{xs:'50px',md:'0'}}}>Experience with ReactJs, VanillaJS, and JQuery</Typography>
+        <Box component='img' src="../../Images/boba-software-developer-workplace.png" alt="workplace-image" sx={{xs:{width:'251px',height:'230px'},md:{width:'121px', height:'110px'}}}/>
       </Box>
       <Divider sx={{margin:'40px 0', background:'#E6AF2E'}}/>
       </Box>
