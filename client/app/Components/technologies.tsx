@@ -8,10 +8,10 @@ const Technologies = () => {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      paddingTop:  '40px' }}>
+      paddingTop:  {xs:'70px',md:'40px'} }}>
       <Typography 
       component="h3"
-      variant="h1" sx={{ fontWeight: '700', paddingBottom: '30px', fontSize: {xs:'30px',md:'40px'} }}>TECHNOLOGIES</Typography>
+      variant="h1" sx={{ fontWeight: '700', paddingBottom: {xs:'40px',md:'30px'}, fontSize: {xs:'30px',md:'40px'} }}>TECHNOLOGIES</Typography>
       <Typography 
       component="p"
       variant="body1" sx={{
@@ -19,10 +19,11 @@ const Technologies = () => {
         fontSize: '16px',
         textAlign: 'center',
         width: { xs: '63%', md: '45%' },
+        lineHeight: {xs:'25px'},
         paddingBottom: '60px'
       }}>I am conversant with a range of JavaScript and TypeScript frontend, backend and CSS libraries and frameworks used in building web solutions such as React, Express, Node, BootStrap, Material UI, JQuery, and lots more.</Typography>
-      <Box component='div' sx={{width: { xs: '90%', md: '80%' }}}>
-      <Box component='div' sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: { xs: '100%', md: '50%' }, paddingBottom: '20px'}}>
+      <Box component='div' sx={{width: { xs: '90%', md: '80%' }, paddingBottom:{xs:'11px'}}}>
+      <Box component='div' sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: { xs: '100%', md: '50%' }, paddingBottom: '25px'}}>
         <Typography component="h6"
       variant="body1" sx={{fontWeight: '900',
         fontSize: '16px',textTransform:'uppercase', borderBottom:'4px solid #E6AF2E', paddingBottom:'5px', color:'#2B2B2B'}}>Frontend</Typography>

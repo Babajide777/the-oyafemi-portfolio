@@ -7,7 +7,7 @@ const About = () => {
 
   const navigateToNextPage = () => {
     setTimeout(() => {
-      window.location.href = `#${pages[1].toLowerCase()}`;
+      window.location.href = `#${pages[2].toLowerCase()}`;
     }, 500);
   };
 
