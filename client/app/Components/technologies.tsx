@@ -34,9 +34,9 @@ const Technologies = () => {
       variant="body1" sx={{fontWeight: '400',
         fontSize: '16px',textTransform:'uppercase', color:'#2B2B2B'}}>Technical writing</Typography>
         </Box>
-      <Box component='div' sx={{border:'1px solid #C8C8C8', borderRadius:'16px', display:'flex', flexDirection:{xs:'column', md:'row'}, alignItems:'center', justifyContent:{xs:'center', md:'space-between'},padding:{xs:'0 50px'}}}>
+      <Box component='div' sx={{border:'1px solid #C8C8C8', borderRadius:'16px', display:'flex', flexDirection:{xs:'column', md:'row'}, alignItems:'center', justifyContent:{xs:'center', md:'space-between'},padding:{xs:'0 50px'}, height:{ md:'140px'}}}>
         <Typography sx={{textAlign:{xs:'center',md:'left'}, width:{md:'35%', lg:'28%'}, paddingTop:{xs:'50px',md:'0'}}}>Experience with ReactJs, VanillaJS, and JQuery</Typography>
-        <Box component='img' src="../../Images/boba-software-developer-workplace.png" alt="workplace-image" sx={{xs:{width:'251px',height:'230px'},md:{width:'121px', height:'110px'}}}/>
+        <Box component='img' src="../../Images/boba-software-developer-workplace.png" alt="workplace-image" sx={{height:{md:'100%'}}}/>
       </Box>
       <Divider sx={{margin:'40px 0', background:'#E6AF2E'}}/>
       </Box>
