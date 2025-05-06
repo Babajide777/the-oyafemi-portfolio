@@ -5,10 +5,10 @@ import { itemData } from '@/utils/data';
 
 const Work = () => {
   return (
-    <Box id="work">
+    <Box id="work" sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
       <Typography>MY PROJECTS</Typography>
-      <Box sx={{ width: 500, minHeight: 829 }}>
-      <Masonry columns={3} spacing={2}>
+      <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Masonry columns={2} spacing={2} sx={{width: '90%'}}>
         {itemData.map((item, index) => (
           <div key={index}>
             <img

@@ -1,4 +1,4 @@
-import pages from '@/utils/data';
+import { pages } from '@/utils/data';
 import { Box, Typography } from '@mui/material';
 import React, { useState } from 'react';
 

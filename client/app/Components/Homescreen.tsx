@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-import pages from '@/utils/data';
+import { pages } from '@/utils/data';
 import React, { useEffect, useState } from 'react';
 
 const Homescreen = () => {
