@@ -19,15 +19,13 @@ export default function Home() {
     >
       <Box
         sx={{
-          maxHeight: '100vh',
+          height: '100vh',
           display: 'flex',
           flexDirection: 'column'
         }}
       >
         <Header />
-        <Box sx={{ flex: 1 }}>
-          <Homescreen />
-        </Box>
+        <Homescreen />
       </Box>
       <Box>
         <About />
