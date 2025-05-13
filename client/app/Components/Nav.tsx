@@ -6,7 +6,7 @@ import React from 'react';
 
 const pages = ['About', 'Work', 'Technologies', 'Blog'];
 
-export default function Header() {
+export default function Nav() {
   return (
     <AppBar
       position="static"
