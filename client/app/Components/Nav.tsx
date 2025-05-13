@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import pages from '@/utils/data';
 
-export default function Header() {
+export default function Nav() {
   return (
     <AppBar
       position="static"
