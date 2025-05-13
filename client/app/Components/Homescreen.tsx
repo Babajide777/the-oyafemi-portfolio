@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import pages from '@/utils/data';
 import React, { useEffect, useState } from 'react';
@@ -18,14 +18,13 @@ const Homescreen = () => {
   };
 
   return (
-    <Box
+    <Container
       component="section"
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
         alignItems: 'center',
-        minHeight: {xs:'91dvh',md:'87vh',lg:'85.5vh'},
+        minHeight: {xs:'100dvh',md:'100vh',lg:'100vh'},
         overflow: 'hidden',
         mt: { xs: '80px', md: '15px' },
         transition: 'opacity 0.5s ease-in-out',
@@ -38,8 +37,8 @@ const Homescreen = () => {
           fontSize: '44px',
           fontWeight: '600',
           textAlign: 'center',
-          width: { xs: '51%', md: '35%', lg: '30%' },
-          mb: {md:'15px' },
+          width: { xs: '55%', md: '35%', lg: '30%' },
+          mb: {xs:'25px', md:'15px'},
         }}
       >
         <Typography
@@ -59,10 +58,10 @@ const Homescreen = () => {
         variant="body1"
         sx={{
           fontWeight: '400',
-          fontSize: '14px',
+          fontSize: '18px',
           textAlign: 'center',
           color: '#6B6B6B',
-          mb: { xs: '60px', md: '20px', lg: '15px' },
+          mb: { xs: '70px', md: '40px', lg: '29px' },
           width: { xs: '50%' }
         }}
       >
@@ -75,14 +74,14 @@ const Homescreen = () => {
           borderStyle: 'solid',
           borderRadius: '150px',
           padding: '10px',
-          mb: { xs: '141px', md: '23px', lg: '15px' },
+          mb: { xs: '80px', md: '42px', lg: '15px' },
         }}
       >
         <Box
           sx={{
             background: '#E6AF2E',
-            width: { xs: '200px', md: '150px' },
-            height: { xs: '300px', md: '220px', lg: '210px' },
+            width: { xs: '230px', md: '150px' },
+            height: { xs: '330px', md: '220px', lg: '210px' },
             borderRadius: '150px',
             display: 'flex',
             justifyContent: 'center',
@@ -145,7 +144,7 @@ const Homescreen = () => {
           </Button>
         )}
       </Box>
-    </Box>
+    </Container>
   );
 };
 
