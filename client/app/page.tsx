@@ -19,7 +19,7 @@ export default function Home() {
     >
       <Box
         sx={{
-          height: '100vh',
+          height: {xs:'350px', md: '100vh'},
           display: 'flex',
           flexDirection: 'column'
         }}
