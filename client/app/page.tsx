@@ -6,32 +6,19 @@ import Homescreen from './Components/Homescreen';
 import Technologies from './Components/technologies';
 import Work from './Components/work';
 import Footer from './Components/Footer';
-import Header from './Components/Header';
+import Header from './Components/Nav';
+import Nav from './Components/Nav';
 
 export default function Home() {
   return (
-    <Box
-      sx={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column'
-      }}
-    >
-      <Box
-        sx={{
-          height: {xs:'350px', md: '100vh'},
-          display: 'flex',
-          flexDirection: 'column'
-        }}
-      >
-        <Header />
-        <Homescreen />
+    <Box>
+      <Box component='header'>
+      <Nav />
+      <Homescreen />
       </Box>
-      <Box>
-        <About />
-        <Technologies />
-        <Work />
-      </Box>
+      <About />
+      <Technologies />
+      <Work />
       <Footer />
     </Box>
   );
