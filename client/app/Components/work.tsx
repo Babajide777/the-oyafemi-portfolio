@@ -13,11 +13,8 @@ const [page,setPage]=useState(1)
 const itemsPerPage = totalPost
 
 const startIndex = ((page - 1) * itemsPerPage)
-console.log(startIndex)
 const endIndex = startIndex + itemsPerPage
-console.log(endIndex)
 const paginatedItems = itemData.slice(startIndex, endIndex)
-console.log(paginatedItems)
 
 const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
   setPage(value);
@@ -56,16 +53,24 @@ const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => 
                   bottom: 0,
                   left: 0,
                   right: 0,
-                  bgcolor: 'rgba(0,0,0,0.6)',
+                  top: 0,
+                  bgcolor: 'rgba(0,0,0,0.7)',
                   color: 'white',
                   opacity: 0,
                   transform: 'translateY(100%)',
                   transition: 'opacity 200ms ease, transform 200ms ease',
                 }}>
-                <Typography variant="h6">{item.title}</Typography>
-                <Typography variant="body2" color="text.secondary">
+                  <Box sx={{width:'40px',height:'40px', backgroundColor:'#ffffff',display:'flex',justifyContent:'center',alignItems:'center',position:'absolute',top:'0px',right:'0px', border:'none'}}>
+                  <Box component='img' src='../../Images/export-Icon.png'/>
+                </Box>
+                <Box sx={{position:'absolute',bottom:'15px',left:'15px'}}>
+                <Typography variant="body2" color="#ffffff">
                   {item.year}
                 </Typography>
+                <Typography component="h5"
+        variant="body1"
+        sx={{ fontWeight: '700', paddingBottom: '15px', fontSize: {xs:'16px', md:'30px'}, textTransform:'uppercase' }}>{item.title}</Typography>
+                </Box>
               </CardContent>
             </Card>
              </Box>
