@@ -25,7 +25,9 @@ const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => 
 
   return (
     <Box id="work" sx={{width: '100%', display: 'flex', flexDirection:'column',justifyContent: 'center', alignItems: 'center'}}>
-      <Typography>MY PROJECTS</Typography>
+      <Typography component="h3"
+        variant="h1"
+        sx={{ fontWeight: '700', paddingBottom: '15px', fontSize: '40px' }}>MY PROJECTS</Typography>
       <Stack sx={{width: '100%', display: 'flex', alignItems: 'center',mt: 4 }}>
       <Box sx={{width: '90%', display: 'grid', gridTemplateColumns: { xs: 'repeat(3, 1fr)', md: 'repeat(4, 1fr)' }, gap:'15px',  }} >
         {paginatedItems.map((item, index) => (
@@ -74,7 +76,7 @@ const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => 
         count={Math.ceil(itemData.length / itemsPerPage)}
         page={page}
         onChange={handlePageChange}
-        sx={{ mt: 4 }}
+        sx={{ my: 4 }}
         variant="outlined"
         color="primary"
       />
