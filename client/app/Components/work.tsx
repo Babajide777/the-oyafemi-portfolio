@@ -6,7 +6,6 @@ import { itemData } from '@/utils/data';
 const Work = () => {
 const theme = useTheme();
 const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
-// const totalCols = isMdUp ? 4 : 3;
 const totalPost = isMdUp ? 6 : 4;
 
 const [page,setPage]=useState(1)
@@ -31,16 +30,18 @@ const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => 
           <Box key={index} sx={{// for the second item (idx===1), span cols 2–4
       gridColumn: 
       isMdUp ? index === 1 ? '2 / 4' : index === 3 ? '1 / 3' : undefined :
-  index === 1 ? '2 / 4' :
-  index === 2 ? '1 / 3' :
-  undefined,
- height:'100%'}}>
+      index === 1 ? '2 / 4' :
+      index === 2 ? '1 / 3' :
+      undefined,
+      height:'100%'}}>
             <Card sx={{
+                borderBottomRightRadius: isMdUp && index === 5 ? '50px' : undefined,
                 height: {xs:'150px', md:'200px'},
                 position: 'relative',
                 overflow: 'hidden',
                 '&:hover .hoverContent': {
                   opacity: 1,
+                  cursor: 'pointer',
                   transform: 'translateY(0)',
                 },
               }}>
@@ -64,7 +65,7 @@ const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => 
                   <Box component='img' src='../../Images/export-Icon.png'/>
                 </Box>
                 <Box sx={{position:'absolute',bottom:'15px',left:'15px'}}>
-                <Typography variant="body2" color="#ffffff">
+                <Typography variant="body1" color="#ffffff" sx={{fontSize:'10px', fontWeight: '400'}}>
                   {item.year}
                 </Typography>
                 <Typography component="h5"
