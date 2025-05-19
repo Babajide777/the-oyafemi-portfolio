@@ -1,3 +1,5 @@
+"use client";
+
 import { Cormorant_SC, Outfit } from "next/font/google";
 import { productSans, switzer } from "@/utils/fonts";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
