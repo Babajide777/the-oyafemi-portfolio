@@ -10,4 +10,10 @@ interface LayoutProps {
   darkMode: boolean;
 }
 
-export type { GetThemeOptions, LayoutProps };
+type itemData = {
+  img: string;
+  title: string;
+  year: number;
+}
+
+export type { GetThemeOptions, LayoutProps, itemData };
