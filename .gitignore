@@ -87,7 +87,3 @@
 
 # vercel
 /client/.vercel
-
-
-.env
-/server/__pycache__/
