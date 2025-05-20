@@ -5,8 +5,9 @@ export default function Footer() {
     const [project, setProject] = useState('');
 
   return (
-    <Box sx={{ padding:'60px 20px 80px 20px',display:'flex',flexDirection:'column',alignItems:'center',background: 'linear-gradient(to bottom, #E6AF2E 0%, #E6AF2E 45%, #E6AF2E 67.96%, #6B0504 110%)' }}>
-      <Box sx={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+    <Box sx={{ paddingBottom:'80px',display:'flex', justifyContent:'center',background: 'linear-gradient(to bottom, #E6AF2E 0%, #E6AF2E 45%, #E6AF2E 67.96%, #6B0504 110%)' }}>
+      <Box sx={{width:{xs:'90%'},display:'flex',flexDirection:{xs:'column',md:'row'},alignItems:'center',paddingTop:'50px'}}>
+      <Box sx={{display:'flex',flexDirection:'column',alignItems:'center', width:{md:"42.5%"}}}>
         <Typography component='p' sx={{textAlign:'center',width:'65%', fontSize:'20px', fontFamily:"'Switzer',serif",fontWeight:'400'}}>
           Do you need my services? Kindly fill the form below so we can work together.
         </Typography>
@@ -29,7 +30,7 @@ export default function Footer() {
         <Button variant='contained' sx={{borderRadius:'44px',background:'#000000', width:'100%', mt:3, color:'#ffffff', padding:'10px 0',textTransform:'none !important'}}>submit</Button>
         </Box>
       </Box>
-    <Box sx={{marginTop:'50px',background:'rgba(115, 15, 6, 0.4)',width:'90%', display:'flex',flexDirection:'column',alignItems:'center',padding:'40px 20px', borderRadius:'44px'}}>
+    <Box sx={{marginTop:'50px',background:'rgba(115, 15, 6, 0.4)',width:{xs:'90%', md: '42.5%'}, display:'flex',flexDirection:'column',alignItems:'center',padding:'40px 20px', borderRadius:'44px'}}>
       <Typography sx={{paddingBottom:'20px', fontSize:'25px', fontFamily:"'Switzer',serif",fontWeight:'400', color:'white'}}>Contact me on</Typography>
       <Box sx={
         {display:'flex',justifyContent:'space-around',alignItems:'center',width:'100%'}
@@ -39,6 +40,7 @@ export default function Footer() {
         <Box sx={{background:'#ffffff', width:'55px', height:'55px',borderRadius:'50%'}}></Box>
         <Box sx={{background:'#ffffff', width:'55px', height:'55px',borderRadius:'50%'}}></Box>
       </Box>
+    </Box>
     </Box>
   </Box>
   )}
