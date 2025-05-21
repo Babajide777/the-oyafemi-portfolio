@@ -36,7 +36,7 @@ const Homescreen = () => {
           fontWeight: '400',
           textAlign: 'center',
           width: { xs: '67%', md: '35%', lg: '30%' },
-          mb: {xs:'25px', md:'15px'},
+          mb: {xs:'15px', md:'15px'},
         }}
       >My Name is{' '}
         <Typography
@@ -54,11 +54,11 @@ const Homescreen = () => {
         variant="body1"
         sx={{
           fontWeight: '400',
-          fontSize: '18px',
+          fontSize: {xs:'16px',md:'18px'},
           textAlign: 'center',
           color: '#6B6B6B',
-          mb: { xs: '70px', md: '40px', lg: '29px' },
-          width: { xs: '50%' }
+          mb: { xs: '50px', md: '40px', lg: '29px' },
+          width: { xs: '60%' }
         }}
       >
         And This is my portfolio showcase
