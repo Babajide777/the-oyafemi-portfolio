@@ -24,7 +24,7 @@ const Homescreen = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        mt: { xs: '80px', md: '15px' },
+        mt: { xs: '60px', md: '15px' },
         transition: 'opacity 0.5s ease-in-out',
         opacity: showContent ? 1 : 0
       }}
@@ -35,7 +35,7 @@ const Homescreen = () => {
           fontSize: '44px',
           fontWeight: '400',
           textAlign: 'center',
-          width: { xs: '67%', md: '35%', lg: '30%' },
+          width: { xs: '67%', md: '40%', lg: '35%' },
           mb: {xs:'15px', md:'15px'},
         }}
       >My Name is{' '}
@@ -57,7 +57,7 @@ const Homescreen = () => {
           fontSize: {xs:'16px',md:'18px'},
           textAlign: 'center',
           color: '#6B6B6B',
-          mb: { xs: '50px', md: '40px', lg: '29px' },
+          mb: { xs: '30px', md: '40px', lg: '29px' },
           width: { xs: '60%' }
         }}
       >
@@ -70,14 +70,14 @@ const Homescreen = () => {
           borderStyle: 'solid',
           borderRadius: '150px',
           padding: '10px',
-          mb: { xs: '80px', md: '42px', lg: '15px' },
+          mb: { xs: '30px', md: '42px', lg: '15px' },
         }}
       >
         <Box
           sx={{
             background: '#E6AF2E',
-            width: { xs: '230px', md: '150px' },
-            height: { xs: '330px', md: '220px', lg: '210px' },
+            width: { xs: '180px', md: '150px' },
+            height: { xs: '250px', md: '220px', lg: '210px' },
             borderRadius: '150px',
             display: 'flex',
             justifyContent: 'center',
@@ -111,7 +111,7 @@ const Homescreen = () => {
                 typography: 'body1',
                 background: '#E6AF2E',
                 color: '#000000',
-                height: { xs: '80px', md: '70px' },
+                height: { xs: '57px', md: '70px' },
                 width: { xs: '350px', md: '600px' },
                 borderRadius: '150px 150px 0 0',
                 textTransform: 'none'
