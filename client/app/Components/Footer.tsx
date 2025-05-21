@@ -27,7 +27,7 @@ export default function Footer() {
           lineHeight: '1.2em',    // consistent line height
         }
     },width:{xs:'100%',md:'80%'}}}/>
-        <Button variant='contained' sx={{borderRadius:'44px',background:'#000000', width:{xs:'100%',md:'80%'}, mt:3, color:'#ffffff', padding:'10px 0',textTransform:'none !important'}}>submit</Button>
+        <Button variant='contained' sx={{borderRadius:'44px',background:'#000000', width:{xs:'100%',md:'80%'}, mt:3, color:'#ffffff', padding:'20px 0',textTransform:'none !important'}}>submit</Button>
         </Box>
       </Box>
     <Box sx={{marginTop:'50px',background:'rgba(115, 15, 6, 0.4)',width:{xs:'90%', md: '350px'},height:{md:'170px'}, display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'40px 20px', borderRadius:'44px'}}>
