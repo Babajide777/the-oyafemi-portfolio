@@ -33,24 +33,22 @@ const Homescreen = () => {
         variant="h1"
         sx={{
           fontSize: '44px',
-          fontWeight: '600',
+          fontWeight: '400',
           textAlign: 'center',
-          width: { xs: '55%', md: '35%', lg: '30%' },
+          width: { xs: '67%', md: '35%', lg: '30%' },
           mb: {xs:'25px', md:'15px'},
         }}
-      >
+      >My Name is{' '}
         <Typography
           component="span"
           variant="h1"
           sx={{
             fontSize: '44px',
-            fontWeight: '400',
+            fontWeight: '600',
             textTransform: 'capitalize'
           }}
-        >
-          My Name is
-        </Typography>{' '}
-        Babajide Oyafemi
+        >Babajide Oyafemi   
+        </Typography>   
       </Typography>
       <Typography
         variant="body1"
