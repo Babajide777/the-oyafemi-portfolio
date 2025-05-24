@@ -1,12 +1,10 @@
-'use client';
+"use client";
 
-import { Container, CssBaseline, ThemeProvider } from '@mui/material';
-import Head from 'next/head';
-import React from 'react';
-import { LayoutProps } from '@/utils/type';
-import getTheme from '@/utils/styles';
-import Header from './Header';
-import Footer from './Footer';
+import { Box, Container, CssBaseline, ThemeProvider } from "@mui/material";
+import Head from "next/head";
+import React from "react";
+import { LayoutProps } from "@/utils/type";
+import getTheme from "@/utils/styles";
 
 export default function Layout({ title, children, darkMode }: LayoutProps) {
   return (
@@ -14,10 +12,10 @@ export default function Layout({ title, children, darkMode }: LayoutProps) {
       <CssBaseline />
       <Head>
         <title>
-          {title ? `${title} - Oyafemi Portfolio` : 'Oyafemi Portfolio'}
+          {title ? `${title} - Oyafemi Portfolio` : "Oyafemi Portfolio"}
         </title>
       </Head>
-      <Container>{children}</Container>
+      <Box>{children}</Box>
     </ThemeProvider>
   );
 }

@@ -1,27 +1,35 @@
 "use client";
 
-import { AppBar, Container, Menu, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
+import pages from "@/utils/data";
 
-const pages = ["About", "Work", "Technologies", "Blog"];
-
-export default function Header() {
+export default function Nav() {
   return (
     <AppBar
       position="static"
       sx={{
         display: { xs: "none", md: "flex" },
+        alignItems: "center",
+        justifyContent: "center",
         margin: "0 auto",
         width: "90%",
-        marginTop: "20px",
+        height: "50px",
+        marginTop: "15px",
         borderRadius: "40px",
         boxShadow: "0px 4px 30px 0px #B333E914",
         background: "#FFFFFF",
       }}
     >
       <Toolbar
-        sx={{ width: "100", display: "flex", justifyContent: "space-around" }}
+        sx={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-around",
+        }}
       >
         {pages.map((page) => (
           <Link
@@ -35,6 +43,8 @@ export default function Header() {
                 textAlign: "center",
                 cursor: "pointer",
                 mx: 2,
+                fontSize: "14px",
+                fontWeight: "500",
               }}
               variant="body1"
             >
