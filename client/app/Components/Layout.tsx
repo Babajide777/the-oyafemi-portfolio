@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, CssBaseline, ThemeProvider } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import Head from "next/head";
 import React from "react";
 import { LayoutProps } from "@/utils/type";
@@ -15,8 +15,7 @@ export default function Layout({ title, children, darkMode }: LayoutProps) {
           {title ? `${title} - Oyafemi Portfolio` : "Oyafemi Portfolio"}
         </title>
       </Head>
-      <Box>{children}</Box>
+      <Box component="main">{children}</Box>
     </ThemeProvider>
   );
 }
-1;
