@@ -16,7 +16,6 @@ const Homescreen = () => {
       window.location.href = `#${pages[0].toLowerCase()}`;
     }, 500);
   };
-
   return (
     <Container
       component="section"
