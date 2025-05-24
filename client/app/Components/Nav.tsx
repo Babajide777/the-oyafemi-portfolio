@@ -3,7 +3,7 @@
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-import pages from "@/utils/data";
+import { pages } from "@/utils/data";
 
 export default function Nav() {
   return (
