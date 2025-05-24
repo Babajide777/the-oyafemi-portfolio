@@ -1,49 +1,40 @@
-'use client';
+"use client";
 
-import { AppBar, Container, Menu, Toolbar, Typography } from '@mui/material';
-import Link from 'next/link';
-import React from 'react';
+import { AppBar, Container, Menu, Toolbar, Typography } from "@mui/material";
+import Link from "next/link";
+import React from "react";
 
-const pages = ['About', 'Work', 'Technologies', 'Blog'];
+const pages = ["About", "Work", "Technologies", "Blog"];
 
 export default function Header() {
   return (
     <AppBar
       position="static"
       sx={{
-        display: { xs: 'none', md: 'flex' },
-        alignItems: 'center',
-        justifyContent: 'center',
-        margin: '0 auto',
-        width: '90%',
-        height: '30px',
-        marginTop: '15px',
-        borderRadius: '40px',
-        boxShadow: '0px 4px 30px 0px #B333E914',
-        background: '#FFFFFF'
+        display: { xs: "none", md: "flex" },
+        margin: "0 auto",
+        width: "90%",
+        marginTop: "20px",
+        borderRadius: "40px",
+        boxShadow: "0px 4px 30px 0px #B333E914",
+        background: "#FFFFFF",
       }}
     >
       <Toolbar
-        sx={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-around'
-        }}
+        sx={{ width: "100", display: "flex", justifyContent: "space-around" }}
       >
-        {pages.map(page => (
+        {pages.map((page) => (
           <Link
             key={page}
             href={`#${page.toLowerCase()}`}
-            style={{ textDecoration: 'none', color: 'inherit' }}
+            style={{ textDecoration: "none", color: "inherit" }}
           >
             <Typography
               sx={{
-                color: '#3C3C3C',
-                textAlign: 'center',
-                cursor: 'pointer',
-                mx: 2
+                color: "#3C3C3C",
+                textAlign: "center",
+                cursor: "pointer",
+                mx: 2,
               }}
               variant="body1"
             >
