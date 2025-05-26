@@ -22,7 +22,7 @@ const About = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        paddingTop: { xs: '60px', md: '20px' },
+        paddingTop: { xs: '40px', md: '20px' },
         // Add a pseudo-element for the wavy line:
         '&::after': {
           display: { xs: 'none', md: 'block' },
@@ -52,7 +52,7 @@ const About = () => {
           fontWeight: '400',
           fontSize: '16px',
           textAlign: 'center',
-          width: { xs: '63%', md: '52%' },
+          width: { xs: '70%', md: '52%' },
           paddingBottom: '20px'
         }}
       >
@@ -67,8 +67,8 @@ const About = () => {
           fontWeight: '400',
           fontSize: '16px',
           textAlign: 'center',
-          width: { xs: '63%', md: '53%' },
-          paddingBottom: { xs: '60px', md: '35px', lg:'25px' }
+          width: { xs: '69%', md: '53%' },
+          paddingBottom: { xs: '30px', md: '35px', lg:'25px' }
         }}
       >
         I am particularly interested in start-up and small scale businesses as I
@@ -93,11 +93,11 @@ const About = () => {
       >
         <Box
           sx={{
-            width: { xs: '135px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
-            height: { xs: '135px', sm: '150px', md: '220px' },
+            width: { xs: '100px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
+            height: { xs: '100px', sm: '150px', md: '220px' },
             gridArea: 'a',
             borderRadius: '50%',
-            marginLeft: { xs: '10px', md: '0' },
+            marginLeft: { xs: '40px', md: '0' },
             marginTop: '-20px'
           }}
         >
@@ -114,8 +114,8 @@ const About = () => {
         </Box>
         <Box
           sx={{
-            width: { xs: '135px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
-            height: { xs: '135px', sm: '150px', md: '220px' },
+            width: { xs: '100px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
+            height: { xs: '100px', sm: '150px', md: '220px' },
             gridArea: 'c',
             borderRadius: '50%',
             marginTop: { md: '30px' }
@@ -134,11 +134,11 @@ const About = () => {
         </Box>
         <Box
           sx={{
-            width: { xs: '135px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
-            height: { xs: '135px', sm: '150px', md: '220px' },
+            width: { xs: '100px', sm: '150px', md: '220px' }, // Adjusts size by breakpoint
+            height: { xs: '100px', sm: '150px', md: '220px' },
             gridArea: 'b',
             borderRadius: '50%',
-            marginLeft: { xs: '-70px', md: '0' },
+            marginLeft: { xs: '-40px', md: '0' },
             marginTop: { md: '-20px' }
           }}
         >
@@ -155,7 +155,7 @@ const About = () => {
         </Box>
       </Box>
       <Box
-        sx={{ marginTop: { xs: '120px', md: '20px', cursor:'pointer' } }}
+        sx={{ marginTop: { xs: '40px', md: '20px', cursor:'pointer' } }}
         onClick={navigateToNextPage}
       >
         <img src="../../Images/Mask group.png" alt="Click-mouse" />
