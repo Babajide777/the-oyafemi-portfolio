@@ -11,7 +11,7 @@ import Nav from "./Components/Nav";
 export default function Home() {
   return (
     <Box>
-      <Box component="header">
+      <Box component="header" sx={{height: "100vh", overflow: "hidden"}}>
         <Nav />
         <Homescreen />
       </Box>

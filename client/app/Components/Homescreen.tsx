@@ -57,7 +57,7 @@ const Homescreen = () => {
           fontWeight: "400",
           fontSize: { xs: "16px", md: "18px" },
           textAlign: "center",
-          color: "#6B6B6B",
+          color: theme => theme.palette.custom.Gray100,
           mb: { xs: "30px", md: "40px", lg: "29px" },
           width: { xs: "60%" },
         }}
@@ -66,7 +66,7 @@ const Homescreen = () => {
       </Typography>
       <Box
         sx={{
-          borderColor: "#CECECE",
+          borderColor: theme => theme.palette.custom.Gray200,
           borderWidth: "1px",
           borderStyle: "solid",
           borderRadius: "150px",
@@ -76,7 +76,7 @@ const Homescreen = () => {
       >
         <Box
           sx={{
-            background: "#E6AF2E",
+            background: theme => theme.palette.custom.Yellow,
             width: { xs: "180px", md: "150px" },
             height: { xs: "250px", md: "220px", lg: "210px" },
             borderRadius: "150px",
@@ -110,8 +110,8 @@ const Homescreen = () => {
               sx={{
                 fontWeight: "500",
                 typography: "body1",
-                background: "#E6AF2E",
-                color: "#000000",
+                background: theme => theme.palette.custom.Yellow,
+                color: theme => theme.palette.custom.Black100,
                 height: { xs: "57px", md: "70px" },
                 width: { xs: "350px", md: "600px" },
                 borderRadius: "150px 150px 0 0",
