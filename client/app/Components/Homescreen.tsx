@@ -1,11 +1,23 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { motion } from "framer-motion";
 import { pages } from "@/utils/data";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Homescreen = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showContent, setShowContent] = useState(true);
+
+  const theme = useTheme();
+  const router = useRouter();
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 900);
@@ -20,10 +32,12 @@ const Homescreen = () => {
     <Container
       component="section"
       sx={{
+        height: "calc(100% - 75px)", // Adjust for header height
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        mt: { xs: "60px", md: "15px" },
+        justifyContent: "space-between",
+        mt: "25px",
         transition: "opacity 0.5s ease-in-out",
         opacity: showContent ? 1 : 0,
       }}
@@ -31,11 +45,11 @@ const Homescreen = () => {
       <Typography
         variant="h1"
         sx={{
-          fontSize: "44px",
+          fontSize: { xs: "44px", md: "40px", lg: "36px" },
           fontWeight: "400",
           textAlign: "center",
-          width: { xs: "67%", md: "40%", lg: "35%" },
-          mb: { xs: "15px", md: "15px" },
+          width: { xs: "67%", md: "38%", lg: "30%" },
+          color: (theme) => theme.palette.custom.Black100,
         }}
       >
         My Name is{" "}
@@ -43,7 +57,7 @@ const Homescreen = () => {
           component="span"
           variant="h1"
           sx={{
-            fontSize: "44px",
+            fontSize: { xs: "44px", md: "40px", lg: "36px" },
             fontWeight: "600",
             textTransform: "uppercase",
           }}
@@ -57,8 +71,8 @@ const Homescreen = () => {
           fontWeight: "400",
           fontSize: { xs: "16px", md: "18px" },
           textAlign: "center",
-          color: theme => theme.palette.custom.Gray100,
-          mb: { xs: "30px", md: "40px", lg: "29px" },
+          color: (theme) => theme.palette.custom.Gray100,
+          // mb: { xs: "30px", md: "40px", lg: "29px" },
           width: { xs: "60%" },
         }}
       >
@@ -66,17 +80,17 @@ const Homescreen = () => {
       </Typography>
       <Box
         sx={{
-          borderColor: theme => theme.palette.custom.Gray200,
+          borderColor: (theme) => theme.palette.custom.Gray200,
           borderWidth: "1px",
           borderStyle: "solid",
           borderRadius: "150px",
           padding: "10px",
-          mb: { xs: "30px", md: "42px", lg: "15px" },
+          // mb: { xs: "30px", md: "42px", lg: "15px" },
         }}
       >
         <Box
           sx={{
-            background: theme => theme.palette.custom.Yellow,
+            background: (theme) => theme.palette.custom.Yellow,
             width: { xs: "180px", md: "150px" },
             height: { xs: "250px", md: "220px", lg: "210px" },
             borderRadius: "150px",
@@ -93,53 +107,59 @@ const Homescreen = () => {
         </Box>
       </Box>
       <Box display="flex" justifyContent="center">
-        {isMobile ? (
-          <motion.div
-            drag="y"
-            dragConstraints={{ top: -100, bottom: 0 }}
-            dragSnapToOrigin={true}
-            onDragEnd={(event, info) => {
-              if (info.offset.y < -50) {
-                navigateToNextPage();
-              }
-            }}
-            style={{ cursor: "grab" }}
-          >
-            <Button
-              variant="contained"
-              sx={{
-                fontWeight: "500",
-                typography: "body1",
-                background: theme => theme.palette.custom.Yellow,
-                color: theme => theme.palette.custom.Black100,
-                height: { xs: "57px", md: "70px" },
-                width: { xs: "350px", md: "600px" },
-                borderRadius: "150px 150px 0 0",
-                textTransform: "none",
-              }}
-            >
-              Drag up to continue
-            </Button>
-          </motion.div>
-        ) : (
-          <Button
-            variant="contained"
-            onClick={navigateToNextPage}
+        <motion.div
+          drag={isMobile ? "y" : false}
+          dragConstraints={isMobile ? { top: -100, bottom: 0 } : undefined}
+          dragSnapToOrigin={isMobile}
+          onDragEnd={
+            isMobile
+              ? (event, info) => {
+                  if (info.offset.y < -50) {
+                    navigateToNextPage();
+                  }
+                }
+              : undefined
+          }
+          style={{ cursor: isMobile ? "grab" : "default" }}
+        >
+          <Box
+            component="img"
+            src="../../Images/Button-mobile.png"
             sx={{
-              typography: "body1",
-              fontWeight: "500",
-              fontSize: "15px",
-              background: "#E6AF2E",
-              color: "#000000",
-              height: { xs: "100px", md: "50px", lg: "50px" },
-              width: { xs: "100px", md: "550px", lg: "450px" },
-              borderRadius: "150px 150px 0 0",
-              textTransform: "none",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              display: { md: "none" },
             }}
-          >
-            Click here to continue
-          </Button>
-        )}
+          />
+        </motion.div>
+        <Box
+          onClick={navigateToNextPage}
+          component="img"
+          src="../../Images/Button-desktop.png"
+          sx={{
+            width: "80%",
+            position: "relative",
+            display: { xs: "none", md: "block" },
+            cursor: "pointer",
+          }}
+        />
+        <Typography
+          onClick={navigateToNextPage}
+          sx={{
+            display: { xs: "none", md: "block" },
+            variant: "body1",
+            fontWeight: "500",
+            fontSize: "15px",
+            color: "#000000",
+            textTransform: "none",
+            position: "absolute",
+            paddingTop: { md: "25px", lg: "30px" },
+            cursor: "pointer",
+          }}
+        >
+          Click here to continue
+        </Typography>
       </Box>
     </Container>
   );
