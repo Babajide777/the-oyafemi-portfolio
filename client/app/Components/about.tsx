@@ -15,7 +15,7 @@ const About = () => {
     <Box
       id="about"
       sx={{
-        position: "relative", // Needed for pseudo-element positioning
+        position: "relative",
         width: "100%",
         minHeight: "100svh",
         background: "#E6AF2E",
@@ -23,7 +23,7 @@ const About = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-evenly",
-        // paddingTop: { xs: '40px', md: '20px' },
+        overflow: "hidden",
         // Add a pseudo-element for the wavy line:
         "&::after": {
           display: { xs: "none", md: "block" },
@@ -32,10 +32,9 @@ const About = () => {
           bottom: "150px",
           left: "0",
           width: "100%",
-          height: "300px", // adjust height as needed
+          height: "300px",
           background: 'url("../../Images/Vector 3.png") no-repeat',
           backgroundSize: "100% 100%",
-          zIndex: -100,
         },
       }}
     >
@@ -54,7 +53,6 @@ const About = () => {
           fontSize: "16px",
           textAlign: "center",
           width: { xs: "70%", md: "52%" },
-          // paddingBottom: '20px'
         }}
       >
         I am a web developer and technical writer who uses MERN stack and other
@@ -69,7 +67,6 @@ const About = () => {
           fontSize: "16px",
           textAlign: "center",
           width: { xs: "69%", md: "53%" },
-          // paddingBottom: { xs: '30px', md: '35px', lg:'25px' }
         }}
       >
         I am particularly interested in start-up and small scale businesses as I
@@ -90,11 +87,12 @@ const About = () => {
           columnGap: { md: "130px" },
           width: "100%",
           maxWidth: "100%",
+          zIndex: 1,
         }}
       >
         <Box
           sx={{
-            width: { xs: "100px", sm: "150px", md: "220px" }, // Adjusts size by breakpoint
+            width: { xs: "100px", sm: "150px", md: "220px" },
             height: { xs: "100px", sm: "150px", md: "220px" },
             gridArea: "a",
             borderRadius: "50%",
