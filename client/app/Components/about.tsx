@@ -18,7 +18,7 @@ const About = () => {
         position: "relative",
         width: "100%",
         minHeight: "100svh",
-        background: "#E6AF2E",
+        background: (theme) => theme.palette.custom.Yellow,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -41,7 +41,11 @@ const About = () => {
       <Typography
         component="h3"
         variant="h1"
-        sx={{ fontWeight: "700", paddingBottom: "15px", fontSize: "40px" }}
+        sx={{
+          fontWeight: "700",
+          color: (theme) => theme.palette.custom.Black100,
+          fontSize: "40px",
+        }}
       >
         About me
       </Typography>
@@ -52,6 +56,7 @@ const About = () => {
           fontWeight: "400",
           fontSize: "16px",
           textAlign: "center",
+          color: (theme) => theme.palette.custom.Black400,
           width: { xs: "70%", md: "52%" },
         }}
       >
@@ -66,6 +71,7 @@ const About = () => {
           fontWeight: "400",
           fontSize: "16px",
           textAlign: "center",
+          color: (theme) => theme.palette.custom.Black400,
           width: { xs: "69%", md: "53%" },
         }}
       >
