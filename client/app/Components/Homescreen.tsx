@@ -32,7 +32,7 @@ const Homescreen = () => {
     <Container
       component="section"
       sx={{
-        height: "calc(100% - 75px)", // Adjust for header height
+        height: "calc(100% - 75px)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -72,7 +72,6 @@ const Homescreen = () => {
           fontSize: { xs: "16px", md: "18px" },
           textAlign: "center",
           color: (theme) => theme.palette.custom.Gray100,
-          // mb: { xs: "30px", md: "40px", lg: "29px" },
           width: { xs: "60%" },
         }}
       >
@@ -85,7 +84,6 @@ const Homescreen = () => {
           borderStyle: "solid",
           borderRadius: "150px",
           padding: "10px",
-          // mb: { xs: "30px", md: "42px", lg: "15px" },
         }}
       >
         <Box
