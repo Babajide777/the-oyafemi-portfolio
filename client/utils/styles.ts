@@ -34,7 +34,8 @@ declare module "@mui/material/styles" {
       FooterButton?: string;
       Gray100: string;
       Gray200: string;
-      white:string;
+      darkGray?: string;
+      white: string;
       maroon?: string;
       radialGradient?: string;
     };
@@ -49,17 +50,15 @@ declare module "@mui/material/styles" {
       Black500?: string;
       FooterBlack?: string;
       FooterButton?: string;
-      Gray100:string;
-      Gray200:string;
-      white:string;
+      Gray100: string;
+      Gray200: string;
+      darkGray?: string;
+      white: string;
       maroon?: string;
       radialGradient?: string;
     };
   }
 }
-
-
-
 
 const getTheme = ({ darkMode }: GetThemeOptions): Theme =>
   createTheme({
@@ -77,20 +76,22 @@ const getTheme = ({ darkMode }: GetThemeOptions): Theme =>
         primary: darkMode ? "#ffffff" : "#000000",
       },
       custom: {
-      Yellow: "#E6AF2E",
-      Black100: "#000000",
-      Black200: "#1B1B1B",
-      Black300: "#3C3C3C",
-      Black400: "#242424",
-      Black500: "#2B2B2B",
-      FooterBlack: "#111111",
-      FooterButton:"#121212",
-      Gray100:"#6B6B6B",
-      Gray200:"rgba(0, 0, 0, 0.22)",
-      white:"#FFFFFF",
-      maroon:"rgba(115, 15, 6, 0.4)",
-      radialGradient: "radial-gradient(to right,rgba(163, 50, 11, 0) 0%, rgba(135, 27, 7, 0.51) 50%, rgba(125, 19, 6, 0.68) 75%, rgba(107, 5, 4, 1) 100%)"
-    },
+        Yellow: "#E6AF2E",
+        Black100: "#000000",
+        Black200: "#1B1B1B",
+        Black300: "#3C3C3C",
+        Black400: "#242424",
+        Black500: "#2B2B2B",
+        FooterBlack: "#111111",
+        FooterButton: "#121212",
+        Gray100: "#6B6B6B",
+        Gray200: "rgba(0, 0, 0, 0.22)",
+        darkGray: "#636363",
+        white: "#FFFFFF",
+        maroon: "rgba(115, 15, 6, 0.4)",
+        radialGradient:
+          "radial-gradient(to right,rgba(163, 50, 11, 0) 0%, rgba(135, 27, 7, 0.51) 50%, rgba(125, 19, 6, 0.68) 75%, rgba(107, 5, 4, 1) 100%)",
+      },
     },
   });
 
