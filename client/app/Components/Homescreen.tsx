@@ -39,6 +39,7 @@ const Homescreen = () => {
         mt: "25px",
         transition: "opacity 0.5s ease-in-out",
         opacity: showContent ? 1 : 0,
+        position: "relative",
       }}
     >
       <Typography
@@ -105,58 +106,71 @@ const Homescreen = () => {
       </Box>
       <Box display="flex" justifyContent="center">
         <motion.div
-          drag={isMobile ? "y" : false}
-          dragConstraints={isMobile ? { top: -100, bottom: 0 } : undefined}
-          dragSnapToOrigin={isMobile}
-          onDragEnd={
-            isMobile
-              ? (event, info) => {
-                  if (info.offset.y < -50) {
-                    navigateToNextPage();
-                  }
-                }
-              : undefined
-          }
-          style={{ cursor: isMobile ? "grab" : "default" }}
+          drag="y"
+          dragConstraints={{ top: -100, bottom: 0 }}
+          dragSnapToOrigin
+          onDragEnd={(event, info) => {
+            if (info.offset.y < -50) {
+              navigateToNextPage();
+            }
+          }}
+          style={{ cursor: "grab", marginTop: "20px" }}
         >
           <Box
-            component="img"
-            src="../../Images/Button-mobile.png"
             sx={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              display: { md: "none" },
+              width: "320px",
+              height: "200px",
+              borderRadius: "200px",
+              background: (theme) => theme.palette.custom.Yellow,
+              display: { xs: "flex", md: "none" },
+              justifyContent: "center",
+              paddingTop: "20px",
+              mb: "-140px",
+              cursor: "pointer",
             }}
-          />
+          >
+            <Typography
+              component="p"
+              variant="body3"
+              sx={{
+                fontWeight: "400",
+                fontSize: "14px",
+                textAlign: "center",
+                color: (theme) => theme.palette.custom.Black200,
+              }}
+            >
+              Drag up to continue
+            </Typography>
+          </Box>
         </motion.div>
+
         <Box
           onClick={navigateToNextPage}
-          component="img"
-          src="../../Images/Button-desktop.png"
           sx={{
-            width: "80%",
-            position: "relative",
-            display: { xs: "none", md: "block" },
-            cursor: "pointer",
-          }}
-        />
-        <Typography
-          onClick={navigateToNextPage}
-          sx={{
-            display: { xs: "none", md: "block" },
-            variant: "body1",
-            fontWeight: "500",
-            fontSize: "15px",
-            color: "#000000",
-            textTransform: "none",
-            position: "absolute",
-            paddingTop: { md: "25px", lg: "30px" },
+            width: "700px",
+            height: "400px",
+            borderRadius: "200px",
+            background: (theme) => theme.palette.custom.Yellow,
+            display: { xs: "none", md: "flex" },
+            justifyContent: "center",
+            paddingTop: "25px",
+            mb: "-315px",
             cursor: "pointer",
           }}
         >
-          Click here to continue
-        </Typography>
+          <Typography
+            component="p"
+            variant="body3"
+            sx={{
+              fontWeight: "400",
+              fontSize: "14px",
+              textAlign: "center",
+              color: (theme) => theme.palette.custom.Black200,
+            }}
+          >
+            Click here to continue
+          </Typography>
+        </Box>
       </Box>
     </Container>
   );
