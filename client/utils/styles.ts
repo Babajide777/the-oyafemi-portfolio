@@ -37,7 +37,7 @@ declare module "@mui/material/styles" {
       darkGray?: string;
       white: string;
       maroon?: string;
-      radialGradient?: string;
+      darkMaroon?: string;
     };
   }
   interface PaletteOptions {
@@ -55,7 +55,7 @@ declare module "@mui/material/styles" {
       darkGray?: string;
       white: string;
       maroon?: string;
-      radialGradient?: string;
+      darkMaroon?: string;
     };
   }
 }
@@ -89,8 +89,16 @@ const getTheme = ({ darkMode }: GetThemeOptions): Theme =>
         darkGray: "#636363",
         white: "#FFFFFF",
         maroon: "rgba(115, 15, 6, 0.4)",
-        radialGradient:
-          "radial-gradient(to right,rgba(163, 50, 11, 0) 0%, rgba(135, 27, 7, 0.51) 50%, rgba(125, 19, 6, 0.68) 75%, rgba(107, 5, 4, 1) 100%)",
+        darkMaroon: "#6B0504",
+      },
+    },
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            textTransform: "capitalize",
+          },
+        },
       },
     },
   });

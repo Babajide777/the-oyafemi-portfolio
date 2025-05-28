@@ -16,7 +16,6 @@ const Homescreen = () => {
   const [showContent, setShowContent] = useState(true);
 
   const theme = useTheme();
-  const router = useRouter();
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
 
   useEffect(() => {
