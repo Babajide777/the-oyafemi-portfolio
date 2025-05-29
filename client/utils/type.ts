@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 interface GetThemeOptions {
   darkMode: boolean;
@@ -11,9 +11,10 @@ interface LayoutProps {
 }
 
 type itemData = {
+  id: number;
   img: string;
   title: string;
   year: number;
-}
+};
 
 export type { GetThemeOptions, LayoutProps, itemData };
