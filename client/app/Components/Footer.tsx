@@ -103,6 +103,7 @@ export default function Footer() {
                 mt: 2,
                 color: (theme) => theme.palette.custom.white,
                 padding: "15px 0",
+                fontFamily: "product-san, sans-serif",
               }}
             >
               submit

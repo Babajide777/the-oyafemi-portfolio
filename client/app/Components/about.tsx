@@ -66,7 +66,7 @@ const About = () => {
       </Typography>
       <Typography
         component="p"
-        variant="body3"
+        variant="body1"
         sx={{
           fontWeight: "400",
           fontSize: "16px",

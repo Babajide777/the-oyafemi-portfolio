@@ -31,7 +31,7 @@ const Homescreen = () => {
     <Container
       component="section"
       sx={{
-        height: "calc(100% - 75px)",
+        height: "calc(100vh - 75px)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -131,9 +131,9 @@ const Homescreen = () => {
           >
             <Typography
               component="p"
-              variant="body3"
+              variant="body1"
               sx={{
-                fontWeight: "400",
+                fontWeight: "500",
                 fontSize: "14px",
                 textAlign: "center",
                 color: (theme) => theme.palette.custom.Black200,
@@ -160,7 +160,7 @@ const Homescreen = () => {
         >
           <Typography
             component="p"
-            variant="body3"
+            variant="body1"
             sx={{
               fontWeight: "400",
               fontSize: "14px",
