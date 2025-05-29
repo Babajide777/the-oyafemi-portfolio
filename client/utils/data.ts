@@ -1,4 +1,3 @@
-import { col } from "framer-motion/client";
 import type { itemData } from "./type";
 
 const pages = ["About", "Work", "Technologies", "Blog"];
