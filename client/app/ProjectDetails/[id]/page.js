@@ -60,13 +60,12 @@ const ProjectDetails = () => {
   };
   return (
     <Layout>
-      <Box component="main">
+      <Box component="main" sx={{ padding: "50px 0" }}>
         <Box
           sx={{
             width: { xs: "85%", md: "100%" },
             margin: "0 auto",
             overflow: "hidden",
-            padding: "40px 0",
           }}
         >
           <Slider {...settings}>
@@ -101,7 +100,8 @@ const ProjectDetails = () => {
         </Box>
         <Box
           sx={{
-            width: "85%",
+            width: { xs: "85%", md: "45%" },
+            padding: "40px 0",
             margin: "0 auto",
           }}
         >
@@ -149,7 +149,13 @@ const ProjectDetails = () => {
             </Typography>
           </Box>
           <Divider sx={{ margin: "30px 0", background: "#D6D6D6" }} />
-          <Box sx={{ width: "70%", display: "flex", margin: "0 auto" }}>
+          <Box
+            sx={{
+              width: { xs: "70%", md: "50%" },
+              display: "flex",
+              margin: "0 auto",
+            }}
+          >
             <Box
               sx={{
                 display: "flex",
@@ -168,7 +174,13 @@ const ProjectDetails = () => {
               ))}
             </Box>
           </Box>
-          <Box sx={{ width: "50%", display: "flex", margin: "0 auto" }}>
+          <Box
+            sx={{
+              width: { xs: "50%", md: "40%", lg: "35%" },
+              display: "flex",
+              margin: "0 auto",
+            }}
+          >
             <Box
               sx={{
                 display: "flex",
