@@ -2,6 +2,8 @@ import type { itemData } from "./type";
 
 const pages = ["About", "Work", "Technologies", "Blog"];
 
+const frameworks = ["JavaScript", "MongoDB", "Express.js", "Node"];
+
 const itemData: itemData[] = [
   {
     id: 1,
@@ -77,4 +79,4 @@ const itemData: itemData[] = [
   },
 ];
 
-export { pages, itemData };
+export { pages, itemData, frameworks };
