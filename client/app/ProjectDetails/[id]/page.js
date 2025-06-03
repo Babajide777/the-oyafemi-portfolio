@@ -9,6 +9,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Layout from "@/app/Components/Layout";
 import Link from "next/link";
+import { NextArrow, PrevArrow } from "@/app/Components/CustomArrows";
+import { a } from "framer-motion/client";
 
 const ProjectDetails = () => {
   const params = useParams();
@@ -35,6 +37,8 @@ const ProjectDetails = () => {
     centerMode: true,
     centerPadding: "60px",
     vertical: false,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -46,6 +50,7 @@ const ProjectDetails = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
+          arrows: false,
         },
       },
       {
@@ -54,6 +59,7 @@ const ProjectDetails = () => {
           slidesToShow: 1,
           centerMode: false,
           centerPadding: "0px",
+          arrows: false,
         },
       },
     ],

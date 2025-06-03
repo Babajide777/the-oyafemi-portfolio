@@ -9,6 +9,15 @@ interface LayoutProps {
   children: ReactNode;
   darkMode: boolean;
 }
+interface ArrowProps {
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
+}
+
+interface PrevArrowProps {
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
+}
 
 type itemData = {
   id: number;
@@ -17,4 +26,10 @@ type itemData = {
   year: number;
 };
 
-export type { GetThemeOptions, LayoutProps, itemData };
+export type {
+  GetThemeOptions,
+  LayoutProps,
+  itemData,
+  ArrowProps,
+  PrevArrowProps,
+};
