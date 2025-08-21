@@ -74,7 +74,7 @@ const Modal: React.FC<ModalProps> = ({ toggleModal }) => {
               placeholder="Enter sub-title"
               multiline
               rows={1}
-              variant="filled"
+              variant="outlined"
               sx={{ width: "70%" }}
             />
           </Box>
