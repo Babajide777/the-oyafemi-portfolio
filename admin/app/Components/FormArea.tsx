@@ -25,8 +25,6 @@ const FormArea: React.FC<ExtendedFormAreaProps> = ({
         value={value}
         onChange={handleChangeArea}
         style={{
-          // width: "300px",
-          // height: "30px",
           padding: "8px",
           borderRadius: "8px",
           border: "1px solid #ccc",

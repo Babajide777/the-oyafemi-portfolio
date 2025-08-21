@@ -150,6 +150,7 @@ const BlogPost = () => {
           minRows={3}
           sx={{ marginLeft: "45px" }}
           titleName={{ marginRight: "150px" }}
+          textareaSx={{ width: "300px", height: "30px" }}
         />
         <Box
           sx={{
