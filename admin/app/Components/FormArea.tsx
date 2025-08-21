@@ -18,7 +18,7 @@ const FormArea: React.FC<ExtendedFormAreaProps> = ({
   textareaSx,
 }) => {
   return (
-    <Box sx={{ display: "flex", flexDirection: "row", gap: 1, ...sx }}>
+    <Box sx={{ ...sx }}>
       <Typography sx={{ ...titleName }}>{title}</Typography>
       <TextareaAutosize
         minRows={minRows}

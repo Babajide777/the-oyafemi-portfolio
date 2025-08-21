@@ -141,16 +141,23 @@ const BlogPost = () => {
             padding: "40px 0",
           }}
         >
-          <Divider sx={{ width: "50%", marginLeft: "45px" }} />
+          <Divider
+            sx={{ width: { xs: "70%", md: "50%" }, marginLeft: "45px" }}
+          />
         </Box>
         <FormArea
           title="Categories"
           value={categories}
           handleChangeArea={(e) => setCategories(e.target.value)}
           minRows={3}
-          sx={{ marginLeft: "45px" }}
-          titleName={{ marginRight: "150px" }}
-          textareaSx={{ width: "300px", height: "30px" }}
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            gap: 1,
+            marginLeft: { xs: "0", md: "45px" },
+          }}
+          titleName={{ marginRight: { md: "150px" } }}
+          textareaSx={{ width: { xs: "40%", md: "300px" }, height: "30px" }}
         />
         <Box
           sx={{
@@ -158,15 +165,17 @@ const BlogPost = () => {
             padding: "40px 0",
           }}
         >
-          <Divider sx={{ width: "50%", marginLeft: "45px" }} />
+          <Divider
+            sx={{ width: { xs: "70%", md: "50%" }, marginLeft: "45px" }}
+          />
         </Box>
         <Button
           sx={{
             color: (theme) => theme.palette.custom.white,
             background: (theme) => theme.palette.custom.Red,
-            width: "400px",
+            width: "200px",
             borderRadius: "30px",
-            marginLeft: "45px",
+            marginLeft: { xs: "0", md: "45px" },
             textTransform: "capitalize",
             fontWeight: 600,
             fontSize: "14px",
