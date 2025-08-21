@@ -3,10 +3,16 @@
 import { Box, Button, Divider, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import FormArea from "../FormArea";
+import Modal from "../Modal";
 
 const BlogPost = () => {
   const [open, setOpen] = useState(false);
   const [categories, setCategories] = useState("");
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
 
   return (
     <Box
@@ -17,6 +23,8 @@ const BlogPost = () => {
         justifyContent: "center",
       }}
     >
+      {modal && <Modal toggleModal={toggleModal} />}
+
       <Box sx={{ width: "85%", margin: "20px 0" }}>
         <Typography
           sx={{
@@ -72,54 +80,61 @@ const BlogPost = () => {
               marginRight: "10px",
             }}
           >
-            <Button onClick={() => setOpen(!open)}>+</Button>
+            <Button onClick={() => setOpen(!open)}>
+              <Box
+                component="img"
+                src="/assets/images/plus.png"
+                sx={{ objectFit: "cover", width: "10px", height: "10px" }}
+              />
+            </Button>
           </Box>
 
-          {/* {open && ( */}
-          <Box
-            sx={{
-              border: (theme) =>
-                `${1}px solid ${theme.palette.custom.lightGray3}`,
-              borderRadius: "5px",
-              padding: "15px",
-              width: "143px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <Typography
+          {open && (
+            <Box
               sx={{
-                paddingBottom: "5px",
-                fontWeight: 500,
-                fontStyle: "medium",
-                fontSize: "13px",
+                border: (theme) =>
+                  `${1}px solid ${theme.palette.custom.lightGray3}`,
+                borderRadius: "5px",
+                padding: "15px",
+                width: "143px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
               }}
+              onClick={toggleModal}
             >
-              Sub-Title
-            </Typography>
-            <Typography
-              sx={{
-                paddingBottom: "5px",
-                fontWeight: 500,
-                fontStyle: "medium",
-                fontSize: "13px",
-              }}
-            >
-              Paragraph
-            </Typography>
-            <Typography
-              sx={{
-                paddingBottom: "5px",
-                fontWeight: 500,
-                fontStyle: "medium",
-                fontSize: "13px",
-              }}
-            >
-              Image
-            </Typography>
-          </Box>
-          {/* )} */}
+              <Typography
+                sx={{
+                  paddingBottom: "5px",
+                  fontWeight: 500,
+                  fontStyle: "medium",
+                  fontSize: "13px",
+                }}
+              >
+                Sub-Title
+              </Typography>
+              <Typography
+                sx={{
+                  paddingBottom: "5px",
+                  fontWeight: 500,
+                  fontStyle: "medium",
+                  fontSize: "13px",
+                }}
+              >
+                Paragraph
+              </Typography>
+              <Typography
+                sx={{
+                  paddingBottom: "5px",
+                  fontWeight: 500,
+                  fontStyle: "medium",
+                  fontSize: "13px",
+                }}
+              >
+                Image
+              </Typography>
+            </Box>
+          )}
         </Box>
         <Box
           sx={{

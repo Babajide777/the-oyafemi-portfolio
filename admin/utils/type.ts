@@ -26,9 +26,14 @@ type DashboardLayoutProps = {
   projectsComponent: React.ReactNode;
 };
 
+interface ModalProps {
+  toggleModal: () => void;
+}
+
 export type {
   GetThemeOptions,
   LayoutProps,
   DashboardLayoutProps,
+  ModalProps,
   FormAreaProps,
 };
