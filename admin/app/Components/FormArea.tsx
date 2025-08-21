@@ -20,11 +20,12 @@ const FormArea: React.FC<ExtendedFormAreaProps> = ({
   return (
     <Box sx={{ ...sx }}>
       <Typography sx={{ ...titleName }}>{title}</Typography>
-      <TextareaAutosize
+      <Box
+        component={TextareaAutosize}
         minRows={minRows}
         value={value}
         onChange={handleChangeArea}
-        style={{
+        sx={{
           padding: "8px",
           borderRadius: "8px",
           border: "1px solid #ccc",

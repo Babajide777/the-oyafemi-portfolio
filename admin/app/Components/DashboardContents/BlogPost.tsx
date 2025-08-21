@@ -149,15 +149,17 @@ const BlogPost = () => {
           title="Categories"
           value={categories}
           handleChangeArea={(e) => setCategories(e.target.value)}
-          minRows={3}
+          minRows={4}
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             gap: 1,
             marginLeft: { xs: "0", md: "45px" },
           }}
-          titleName={{ marginRight: { md: "150px" } }}
-          textareaSx={{ width: { xs: "40%", md: "300px" }, height: "30px" }}
+          titleName={{ marginRight: { md: "100px" } }}
+          textareaSx={{
+            width: { xs: "80%", md: "30%", lg: "35%" },
+          }}
         />
         <Box
           sx={{
@@ -173,7 +175,7 @@ const BlogPost = () => {
           sx={{
             color: (theme) => theme.palette.custom.white,
             background: (theme) => theme.palette.custom.Red,
-            width: "200px",
+            width: { xs: "200px", md: "400px" },
             borderRadius: "30px",
             marginLeft: { xs: "0", md: "45px" },
             textTransform: "capitalize",

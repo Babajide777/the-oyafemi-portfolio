@@ -52,7 +52,7 @@ const Modal: React.FC<ModalProps> = ({ toggleModal }) => {
           display: "flex",
           flexDirection: "column",
           backgroundColor: "#fefcf7",
-          width: "500px",
+          width: { xs: "80%", md: "500px" },
           borderRadius: "8px",
           p: 3,
           maxHeight: "90vh",
@@ -63,19 +63,22 @@ const Modal: React.FC<ModalProps> = ({ toggleModal }) => {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
+              flexDirection: { xs: "column", md: "row" },
+              justifyContent: { md: "space-between" },
+              alignItems: { md: "center" },
               marginBottom: "20px",
             }}
           >
-            <Typography>Sub-Title</Typography>
+            <Typography sx={{ marginBottom: { xs: "10px", md: "0" } }}>
+              Sub-Title
+            </Typography>
             <TextField
               id="standard-textarea"
               placeholder="Enter sub-title"
               multiline
               rows={1}
               variant="outlined"
-              sx={{ width: "70%" }}
+              sx={{ width: { xs: "100%", md: "70%" } }}
             />
           </Box>
           <Box>
@@ -83,9 +86,14 @@ const Modal: React.FC<ModalProps> = ({ toggleModal }) => {
               title="Paragraph"
               value={paragraph}
               handleChangeArea={(e) => setParagraph(e.target.value)}
-              minRows={3}
-              sx={{ justifyContent: "space-between" }}
-              textareaSx={{ width: "70%" }}
+              minRows={4}
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                gap: 1,
+                justifyContent: { md: "space-between" },
+              }}
+              textareaSx={{ width: { xs: "100%", md: "70%" } }}
             />
           </Box>
           <Box
