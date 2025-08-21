@@ -69,6 +69,7 @@ const BlogPost = () => {
         </Box>
         <Box sx={{ display: "flex", height: "100px" }}>
           <Box
+            onClick={() => setOpen(!open)}
             sx={{
               width: "40px",
               height: "40px",
@@ -80,13 +81,11 @@ const BlogPost = () => {
               marginRight: "10px",
             }}
           >
-            <Button onClick={() => setOpen(!open)}>
-              <Box
-                component="img"
-                src="/assets/images/plus.png"
-                sx={{ objectFit: "cover", width: "10px", height: "10px" }}
-              />
-            </Button>
+            <Box
+              component="img"
+              src="/assets/images/plus.png"
+              sx={{ objectFit: "cover", width: "10px", height: "10px" }}
+            />
           </Box>
 
           {open && (
